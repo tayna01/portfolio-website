@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    padding-top: 80px; /* compensa a altura do menu fixo */
+    padding-top: 80px;
     background-color: var(--bg-light);
     font-family: 'Inter', sans-serif;
 }
@@ -55,25 +55,19 @@ body {
 
 .hero-content {
     max-width: 1200px;
+    margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 80px;
+    grid-template-columns: 380px 1fr;
+    gap: 60px;
     align-items: center;
 }
 
+
 .profile-photo {
-    width: 100%;
-    max-width: 350px;
+    width: 380px;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(136, 13, 30, 0.2);
-}
-
-.hero-right h1 {
-    font-size: 48px;
-    font-weight: 600;
-    color: var(--primary);
-    margin: 0 0 30px 0;
-    line-height: 1.2;
 }
 
 .hero-description {
@@ -526,4 +520,24 @@ nav ul li a:hover::after {
 nav ul li a.active {
     color: #6C63FF;
     font-weight: 600;
+}
+
+.hero-title {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.name {
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--primary)
+}
+
+.role {
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 6px;
+    color: var(--soft-pink);
 }
