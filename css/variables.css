@@ -1,0 +1,10 @@
+:root {
+    --primary: #880d1e;
+    --secondary: #dd2d4a;
+    --accent: #f26a8d;
+    --soft-pink: #f49cbb;
+    --soft-blue: #cbeef3;
+    --bg-light: #f8f8f8;
+
+    --font-main: 'Inter', sans-serif;
+}
