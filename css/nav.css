@@ -10,9 +10,9 @@
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0 24px;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .nav-brand {
@@ -23,7 +23,6 @@
   font-size: 15px;
   letter-spacing: 0.5px;
 }
-
 
 .nav-list {
   list-style: none;
@@ -46,7 +45,7 @@
 }
 
 .nav-list a:hover {
-  color: var(#c8f542);
+  color: #c8f542;
   border-color: rgba(200, 245, 66, 0.25);
   background: rgba(200, 245, 66, 0.05);
 }
@@ -59,10 +58,6 @@
   background: none;
   border: none;
   padding: 4px;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 .hamburger span {
@@ -72,4 +67,37 @@
   background: var(--text);
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .nav-brand { display: block; }
+  .hamburger { display: flex; }
+
+  .nav-list {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(10, 10, 15, 0.98);
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-list.open { display: flex; }
+
+  .nav-list a {
+    display: block;
+    padding: 14px 24px;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
 }
