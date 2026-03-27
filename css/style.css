@@ -87,7 +87,7 @@ body {
 }
 
 .profile-photo {
-  width: 100%;
+  width: 80%;
   max-width: 380px;
   border-radius: 20px;
   box-shadow: 0 10px 40px rgba(136, 13, 30, 0.2);
