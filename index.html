@@ -1,344 +1,304 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio</title>
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
-
+  <title>Portfólio | Fullstack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/body.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/project.css">
+  <link rel="stylesheet" href="css/skill.css">
+  <link rel="stylesheet" href="css/botoes.css">
+  <link rel="stylesheet" href="css/glow.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <script src="js/main.js"></script>
 </head>
 
 <body>
-  <nav class="main-nav">
-    <span class="nav-brand">Tayná Vicente</span>
-    <button class="hamburger" id="hamburger" aria-label="Abrir menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul class="nav-list" id="nav-list">
-      <li><a href="#projetos" class="nav-link">Meus Projetos</a></li>
-      <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-      <li>
-        <a href="#experiencia-profissional" class="nav-link">Experiência</a>
-      </li>
-      <li><a href="#educacao" class="nav-link">Educação</a></li>
-      <li><a href="#contato" class="nav-link">Contato</a></li>
-    </ul>
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="navbar-logo">DEV <span>|</span> QA</a>
+      <ul class="navbar-links">
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#projetos">projetos</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#contato">contato</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-btn" title="Alternar tema">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
   </nav>
 
-  <section class="hero-section">
-    <div class="hero-content">
-      <div class="hero-left">
-        <img src="assets/tayna_perfil.jpg" alt="Tayná Vicente Silva" class="profile-photo" />
+  <section class="hero">
+    <div class="wrapper">
+      <div class="hero-intro">
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar has-photo">
+            <img src="C:\Faculdade\PW\portfolio-website\assets\tayna_perfil.jpg" alt="Foto de Tayná"
+              style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+          </div>
+        </div>
+        <div class="hero-text">
+          <h1 class="hero-title">
+            Oi, sou a Tayná</em><br />
+            ✦ <em>Desenvolvedora</em>
+          </h1>
+        </div>
       </div>
-      <div class="hero-right">
-        <h1 class="hero-title">
-          <span class="name">Tayná Vicente Silva</span>
-          <span class="role">Desenvolvedora de Software</span>
-        </h1>
-        <p class="hero-description">
-          Desenvolvedora Full Stack com experiência em C#, .NET, Node.js e
-          React. Atuo na construção e manutenção de aplicações, integrações
-          com APIs e soluções escaláveis.
-        </p>
-        <p class="hero-description">
-          Tenho foco em código limpo, organização e performance. Gosto de
-          transformar problemas complexos em soluções simples e bem
-          estruturadas.
-        </p>
-        <p class="hero-description">
-          Estou em constante evolução, sempre buscando aprimorar minhas
-          habilidades técnicas e contribuir de forma estratégica para os
-          projetos em que atuo.
-        </p>
+      <p class="hero-subtitle">
+        Desenvolvedora Fullstack que transforma ideias em soluções digitais eficientes, unindo código limpo, performance
+        e boa experiência do usuário.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contato" class="btn btn--primary">Entre em contato →</a>
+        <a href="#projetos" class="btn btn--ghost">Ver projetos</a>
       </div>
     </div>
   </section>
 
-  <section id="projetos" class="section projects-section">
-    <div class="container">
-      <h2 class="section-title">Meus Projetos</h2>
-      <p class="section-subtitle">
-        Alguns trabalhos que desenvolvi recentemente
-      </p>
+  <section class="section" id="sobre">
+    <div class="wrapper">
+      <p class="section-label">// sobre mim</p>
+      <h2 class="section-title">Quem sou eu</h2>
+      <p class="section-desc">Uma visão rápida sobre minha trajetória e o que me move.</p>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image" style="background-color: #cbeef3">
-            <span class="project-tag">C/C++</span>
-          </div>
-          <div class="project-info">
-            <h3>Simulador Hierarquia</h3>
-            <p>
-              Simulador de Hierarquia de Memória implementado em C/C++,
-              representando cache, memória principal e armazenamento
-              secundário para demonstrar impacto de latência e organização no
-              desempenho do sistema.
-            </p>
-            <div class="project-tech">
-              <span>C</span>
-              <span>C++</span>
-            </div>
-          </div>
+      <div class="about-grid">
+        <div class="about-card about-bio fade-up">
+          <p>
+            Sou um desenvolvedor <strong>Fullstack</strong> com foco em construir produtos digitais que realmente
+            funcionam — do banco de dados até a interface. Tenho experiência em <strong>React, Node.js e bancos de dados
+              relacionais e não relacionais</strong>, sempre com atenção à performance e à experiência do usuário.
+          </p>
         </div>
 
-        <div class="project-card">
-          <div class="project-image" style="background-color: #f49cbb">
-            <span class="project-tag">Backend</span>
-          </div>
-          <div class="project-info">
-            <h3>Gestão de Eventos</h3>
-            <p>
-              Aplicação backend para gerenciamento de eventos desenvolvida em
-              Java com Hibernate, implementando persistência de dados,
-              mapeamento ORM e operações CRUD para controle de participantes e
-              eventos.
-            </p>
-            <div class="project-tech">
-              <span>Java</span>
-              <span>Hibernate</span>
-              <span>ORM</span>
-            </div>
-          </div>
+        <div class="about-card fade-up">
+          <div class="about-card-icon">🎯</div>
+          <p class="about-card-title">Foco</p>
+          <p class="about-card-text">Aplicações web escaláveis com interfaces intuitivas e código limpo.</p>
+        </div>
+
+        <div class="about-card fade-up">
+          <div class="about-card-icon">🌱</div>
+          <p class="about-card-title">Aprendizado</p>
+          <p class="about-card-text">Sempre explorando novas tecnologias — atualmente mergulhado em TypeScript e
+            arquiteturas cloud.</p>
+        </div>
+
+        <div class="about-card fade-up">
+          <div class="about-card-icon">🤝</div>
+          <p class="about-card-title">Colaboração</p>
+          <p class="about-card-text">Trabalho bem em equipe e valorizo comunicação clara em todos os projetos.</p>
+        </div>
+
+        <div class="about-card fade-up">
+          <div class="about-card-icon">📍</div>
+          <p class="about-card-title">Localização</p>
+          <p class="about-card-text">Baseado no Brasil · Disponível para trabalho remoto.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="habilidades" class="section skills-section">
-    <div class="container">
-      <h2 class="section-title">Habilidades</h2>
-      <p class="section-subtitle">
-        Tecnologias e ferramentas que utilizo no dia a dia
-      </p>
+  <section class="section" id="projetos">
+    <div class="wrapper">
+      <p class="section-label">// projetos</p>
+      <h2 class="section-title">O que construí</h2>
+      <p class="section-desc">Uma seleção dos projetos que mais me orgulho.</p>
+
+      <div class="projects-list">
+
+        <a href="#" class="project-card fade-up">
+          <div class="project-card-body">
+            <p class="project-card-number">01</p>
+            <h3 class="project-card-name">Projeto Alpha</h3>
+            <p class="project-card-desc">Plataforma SaaS para gestão de equipes com dashboard em tempo real,
+              autenticação segura e relatórios exportáveis.</p>
+            <div class="project-card-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+            </div>
+          </div>
+          <span class="project-card-arrow">↗</span>
+        </a>
+
+        <a href="#" class="project-card fade-up">
+          <div class="project-card-body">
+            <p class="project-card-number">02</p>
+            <h3 class="project-card-name">Projeto Beta</h3>
+            <p class="project-card-desc">E-commerce completo com carrinho persistente, integração com gateway de
+              pagamento e painel administrativo.</p>
+            <div class="project-card-tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Stripe</span>
+            </div>
+          </div>
+          <span class="project-card-arrow">↗</span>
+        </a>
+
+        <a href="#" class="project-card fade-up">
+          <div class="project-card-body">
+            <p class="project-card-number">03</p>
+            <h3 class="project-card-name">Projeto Gamma</h3>
+            <p class="project-card-desc">API RESTful para sistema de agendamentos com notificações por e-mail e
+              gerenciamento de permissões por roles.</p>
+            <div class="project-card-tags">
+              <span class="tag">Express</span>
+              <span class="tag">Prisma</span>
+              <span class="tag">Redis</span>
+              <span class="tag">JWT</span>
+            </div>
+          </div>
+          <span class="project-card-arrow">↗</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="wrapper">
+      <p class="section-label">// ferramentas</p>
+      <h2 class="section-title">Stack & Skills</h2>
+      <p class="section-desc">As tecnologias com que trabalho no dia a dia.</p>
 
       <div class="skills-grid">
-        <div class="skill-card">
-          <h3>Backend</h3>
-          <div class="skill-tags">
-            <span>C#</span>
-            <span>.NET</span>
-            <span>Node.js</span>
-            <span>Java</span>
-            <span>Hibernate</span>
-            <span>APIs REST</span>
+
+        <div class="skill-group fade-up">
+          <p class="skill-group-label">Frontend</p>
+          <div class="skill-group-items">
+            <span class="skill-item">Angular</span>
+            <span class="skill-item">React Native</span>
+            <span class="skill-item">React</span>
+            <span class="skill-item">HTML & CSS</span>
           </div>
         </div>
 
-        <div class="skill-card">
-          <h3>Frontend</h3>
-          <div class="skill-tags">
-            <span>React</span>
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Angular</span>
-            <span>TypeScript</span>
-            <span>Flutter</span>
+        <div class="skill-group fade-up">
+          <p class="skill-group-label">Backend</p>
+          <div class="skill-group-items">
+            <span class="skill-item">Node.js</span>
+            <span class="skill-item">Java</span>
+            <span class="skill-item">C#</span>
+            <span class="skill-item">REST APIs</span>
           </div>
         </div>
 
-        <div class="skill-card">
-          <h3>Ferramentas & Banco de Dados</h3>
-          <div class="skill-tags">
-            <span>MySQL</span>
-            <span>PostgreSQL</span>
-            <span>Git</span>
-            <span>Docker</span>
+        <div class="skill-group fade-up">
+          <p class="skill-group-label">Banco de Dados</p>
+          <div class="skill-group-items">
+            <span class="skill-item">PostgreSQL</span>
+            <span class="skill-item">MySQL</span>
           </div>
         </div>
+
+        <div class="skill-group fade-up">
+          <p class="skill-group-label">DevOps</p>
+          <div class="skill-group-items">
+            <span class="skill-item">Docker</span>
+            <span class="skill-item">Google Cloud</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-up">
+          <p class="skill-group-label">Design</p>
+          <div class="skill-group-items">
+            <span class="skill-item">Figma</span>
+            <span class="skill-item">UI/UX Principles</span>
+            <span class="skill-item">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="skill-group fade-up">
+          <p class="skill-group-label">Outros</p>
+          <div class="skill-group-items">
+            <span class="skill-item">Git & GitHub</span>
+            <span class="skill-item">Testes (Playwright)</span>
+            <span class="skill-item">Scrum / Agile</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section id="experiencia-profissional" class="section experience-section">
-    <div class="container">
-      <h2 class="section-title">Experiência Profissional</h2>
-      <p class="section-subtitle">Minha trajetória profissional</p>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Mai 2025 - Presente</div>
-            <h3>Programadora Júnior II</h3>
-            <h4>NextAge Sistemas de Informática Ltda</h4>
-            <p>
-              Desenvolvimento e manutenção de aplicações web, implementação de
-              novas funcionalidades, integrações com APIs e melhorias
-              evolutivas em sistemas corporativos. Atuação com foco em
-              qualidade de código, versionamento e colaboração em equipe.
-            </p>
-            <div class="timeline-tags">
-              <span>React.js</span>
-              <span>Node.js</span>
-              <span>C#</span>
-              <span>.NET</span>
-              <span>APIs</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Jun 2024 - Out 2024</div>
-            <h3>Programadora Júnior I</h3>
-            <h4>NextAge Sistemas de Informática Ltda</h4>
-            <p>
-              Desenvolvimento de funcionalidades backend utilizando C# e .NET,
-              participação em integrações com APIs externas e manutenção de
-              sistemas internos. Colaboração em ambiente ágil.
-            </p>
-            <div class="timeline-tags">
-              <span>C#</span>
-              <span>.NET</span>
-              <span>Git</span>
-              <span>JWT</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-date">Mar 2024 - Mai 2024</div>
-            <h3>Programadora Trainee</h3>
-            <h4>NextAge Sistemas de Informática Ltda</h4>
-            <p>
-              Início da atuação profissional na área de desenvolvimento de
-              software, apoiando na implementação de funcionalidades,
-              correções de bugs e aprendizado de boas práticas de
-              desenvolvimento.
-            </p>
-            <div class="timeline-tags">
-              <span>C#</span>
-              <span>.NET</span>
-              <span>SQL</span>
-              <span>Git</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="educacao" class="section education-section">
-    <div class="container">
-      <h2 class="section-title">Educação</h2>
-      <p class="section-subtitle">Formação acadêmica e certificações</p>
-
-      <div class="education-grid">
-        <div class="education-card">
-          <div class="education-icon">🎓</div>
-          <h3>Bacharelado em Engenharia de Software</h3>
-          <h4>Instituto Federal do Paraná - Campus Paranavaí</h4>
-          <p class="education-date">Fev 2024 - Dez 2027 (Em andamento)</p>
-          <p>
-            Formação focada em engenharia de requisitos, arquitetura de
-            software, banco de dados, desenvolvimento web e metodologias
-            ágeis.
-          </p>
-        </div>
-
-        <div class="education-card">
-          <div class="education-icon">💻</div>
-          <h3>Técnico em Informática</h3>
-          <h4>Instituto Federal do Paraná - Campus Paranavaí</h4>
-          <p class="education-date">Fev 2020 - Dez 2023</p>
-          <p>
-            Formação técnica com base sólida em lógica de programação,
-            desenvolvimento em Java, HTML, CSS e fundamentos de sistemas
-            computacionais.
-          </p>
-        </div>
-
-        <div class="education-card">
-          <div class="education-icon">📜</div>
-          <h3>Scrum Foundation Professional Certification (SFPC)</h3>
-          <h4>Certiprof</h4>
-          <p class="education-date">
-            Emitido em Nov 2024 · Expira em Nov 2027
-          </p>
-          <p>
-            Certificação internacional em fundamentos do framework Scrum,
-            abordando papéis, eventos, artefatos e práticas ágeis para gestão
-            de projetos.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato" class="section contact-section">
-    <div class="container">
+  <section class="section" id="contato">
+    <div class="wrapper">
+      <p class="section-label">// contato</p>
       <h2 class="section-title">Vamos conversar?</h2>
-      <p class="section-subtitle">
-        Entre em contato para projetos, colaborações ou apenas para um café
-        virtual
-      </p>
+      <p class="section-desc">Tem um projeto em mente ou só quer trocar uma ideia? Me manda uma mensagem.</p>
 
-      <div class="contact-content">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">📧</div>
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:taynavicente2019@gmail.com">taynavicente2019@gmail.com</a>
+      <div class="contact-wrapper fade-up">
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Nome</label>
+              <input type="text" id="name" placeholder="Seu nome" />
+            </div>
+            <div class="form-field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" placeholder="seu@email.com" />
             </div>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">💼</div>
-            <div>
-              <h4>LinkedIn</h4>
-              <a href="https://www.linkedin.com/in/tayna-vicente-silva/" target="_blank">in/tayna-vicente-silva/</a>
-            </div>
+          <div class="form-field">
+            <label for="subject">Assunto</label>
+            <input type="text" id="subject" placeholder="Sobre o que é?" />
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">💻</div>
-            <div>
-              <h4>GitHub</h4>
-              <a href="https://github.com/tayna01" target="_blank">github.com/tayna01</a>
-            </div>
+          <div class="form-field">
+            <label for="message">Mensagem</label>
+            <textarea id="message" rows="5" placeholder="Conta mais sobre seu projeto..."></textarea>
           </div>
-          <div class="contact-item">
-            <div class="contact-icon">📱</div>
-            <div>
-              <h4>WhatsApp</h4>
-              <a href="https://wa.me/5544998163459" target="_blank">(44) 99816-3459</a>
-            </div>
-          </div>
+          <button class="btn btn--primary contact-submit" onclick="handleSubmit()">Enviar mensagem →</button>
         </div>
-
-        <form class="contact-form">
-          <div class="form-group">
-            <input type="text" placeholder="Seu nome" required />
-          </div>
-          <div class="form-group">
-            <input type="email" placeholder="Seu email" required />
-          </div>
-          <div class="form-group">
-            <textarea placeholder="Sua mensagem" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn-submit">Enviar mensagem</button>
-        </form>
       </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Tayná Vicente Silva. Todos os direitos reservados.</p>
+    <div class="wrapper footer">
+      <div>
+        <p class="footer-name">Tayná Vicente Silva</p>
+        <p class="footer-copy">© 2026 · Todos os direitos reservados</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/tayna01" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/tayna-vicente-silva" target="_blank">LinkedIn</a>
+        <a href="mailto:taynavicente2019@gmail.com">E-mail</a>
+      </div>
+    </div>
   </footer>
-
-  <script src="js/main.js"></script>
 </body>
 
 </html>

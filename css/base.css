@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.theme-btn .sun-icon {
+  display: block;
+}
+
+.theme-btn .moon-icon {
+  display: none;
+}
+
+body.light-mode .theme-btn .sun-icon {
+  display: none;
+}
+
+body.light-mode .theme-btn .moon-icon {
+  display: block;
+}
