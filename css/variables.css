@@ -1,9 +1,20 @@
 :root {
-    --primary: #880d1e;
-    --secondary: #4a5759;
-    --accent: #dd2d4a;
-    --bg-light: #fbfbfb;
-    --text-dark: #212529;
-    --surface: #f0f2f5;
-    --font-main: 'Inter', sans-serif;
+  --primary:    #880d1e;
+  --secondary:  #4a5759;
+  --accent:     #dd2d4a;
+  --bg-light:   #fbfbfb;
+  --text-dark:  #212529;
+  --surface:    #f0f2f5;
+  --soft-pink:  #dd2d4a;
+  --soft-blue:  #c8e1f0;
+  --font-main:  'Inter', sans-serif;
+}
+
+.dark-theme {
+  --primary:   #ff4d6d;
+  --secondary: #a0a7a9;
+  --accent:    #ff758f;
+  --bg-light:  #121212;
+  --text-dark: #f1f1f1;
+  --surface:   #1e1e1e;
 }
