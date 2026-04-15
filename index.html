@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/botoes.css">
   <link rel="stylesheet" href="css/glow.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
   <script src="js/main.js"></script>
 </head>
 
@@ -28,6 +29,9 @@
   <nav class="navbar" id="navbar">
     <div class="navbar-inner">
       <a href="#" class="navbar-logo">DEV <span>|</span> QA</a>
+      <button id="navbar-hamburger" class="navbar-hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="navbar-links">
         <li><a href="#sobre">sobre</a></li>
         <li><a href="#projetos">projetos</a></li>
@@ -136,17 +140,18 @@
 
       <div class="projects-list">
 
-        <a href="#" class="project-card fade-up">
+        <a href="https://github.com/tayna01/jogo-da-memoria" target="_blank" class="project-card fade-up">
           <div class="project-card-body">
             <p class="project-card-number">01</p>
-            <h3 class="project-card-name">Projeto Alpha</h3>
-            <p class="project-card-desc">Plataforma SaaS para gestão de equipes com dashboard em tempo real,
-              autenticação segura e relatórios exportáveis.</p>
+            <h3 class="project-card-name">Jogo da Velha</h3>
+            <p class="project-card-desc">
+              Jogo da velha interativo desenvolvido com foco em lógica de programação e manipulação do DOM, permitindo
+              partidas entre dois jogadores com validação de jogadas e verificação automática de vitória ou empate.
+            </p>
             <div class="project-card-tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">Docker</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
             </div>
           </div>
           <span class="project-card-arrow">↗</span>
@@ -171,14 +176,12 @@
         <a href="#" class="project-card fade-up">
           <div class="project-card-body">
             <p class="project-card-number">03</p>
-            <h3 class="project-card-name">Projeto Gamma</h3>
+            <h3 class="project-card-name">Fitness App</h3>
             <p class="project-card-desc">API RESTful para sistema de agendamentos com notificações por e-mail e
               gerenciamento de permissões por roles.</p>
             <div class="project-card-tags">
-              <span class="tag">Express</span>
-              <span class="tag">Prisma</span>
-              <span class="tag">Redis</span>
-              <span class="tag">JWT</span>
+              <span class="tag">Dart</span>
+              <span class="tag">Flutter</span>
             </div>
           </div>
           <span class="project-card-arrow">↗</span>
