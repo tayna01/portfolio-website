@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -6,7 +8,7 @@ body {
   margin: 0;
   padding-top: 70px;
   background-color: var(--bg-light);
-  font-family: "Inter", sans-serif;
+  font-family: 'DM Mono', monospace;
 }
 
 .main-nav {
@@ -160,9 +162,17 @@ body {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(136, 13, 30, 0.08);
+  text-decoration: none;
+  color: inherit;
+  display: block;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .project-card:hover {
@@ -581,6 +591,10 @@ footer p {
     padding-top: 60px;
   }
 
+  .nav-brand {
+        display: block;
+    }
+
   .main-nav {
     height: 60px;
     justify-content: flex-start;
@@ -805,10 +819,4 @@ footer p {
 
 .nav-brand {
     display: none;
-}
-
-@media (max-width: 768px) {
-    .nav-brand {
-        display: block;
-    }
 }
