@@ -1,10 +1,9 @@
 :root {
     --primary: #880d1e;
-    --secondary: #dd2d4a;
-    --accent: #f26a8d;
-    --soft-pink: #f49cbb;
-    --soft-blue: #cbeef3;
-    --bg-light: #f8f8f8;
-
+    --secondary: #4a5759;
+    --accent: #dd2d4a;
+    --bg-light: #fbfbfb;
+    --text-dark: #212529;
+    --surface: #f0f2f5;
     --font-main: 'Inter', sans-serif;
 }
