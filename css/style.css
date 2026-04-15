@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding-top: 70px;
   background-color: var(--bg-light);
-  font-family: 'DM Mono', monospace;
+  font-family: "DM Mono", monospace;
 }
 
 .main-nav {
@@ -172,7 +172,7 @@ body {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
@@ -534,7 +534,7 @@ body {
 
 footer {
   height: 50px;
-  background-color:#555;
+  background-color: #555;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -586,14 +586,14 @@ footer p {
   }
 }
 
+.nav-brand {
+  display: none;
+}
+
 @media (max-width: 640px) {
   body {
     padding-top: 60px;
   }
-
-  .nav-brand {
-        display: block;
-    }
 
   .main-nav {
     height: 60px;
@@ -638,6 +638,7 @@ footer p {
   }
 
   .nav-brand {
+    display: block;
     color: white;
     font-size: 16px;
     font-weight: 600;
@@ -664,7 +665,7 @@ footer p {
   .hero-description {
     font-size: 15px;
     line-height: 1.7;
-    text-align: left;
+    text-align: center;
   }
 
   .section {
@@ -817,6 +818,4 @@ footer p {
   }
 }
 
-.nav-brand {
-    display: none;
-}
+
