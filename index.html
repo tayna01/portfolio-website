@@ -24,16 +24,22 @@
       <span></span>
     </button>
     <ul class="nav-list" id="nav-list">
-      <li><a href="#projetos" class="nav-link">Meus Projetos</a></li>
-      <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-      <li><a href="#experiencia-profissional" class="nav-link">Experiência</a></li>
-      <li><a href="#educacao" class="nav-link">Educação</a></li>
-      <li><a href="#contato" class="nav-link">Contato</a></li>
+      <li><a href="#projetos" class="nav-link" data-i18n="nav.projects">Meus Projetos</a></li>
+      <li><a href="#habilidades" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+      <li><a href="#experiencia-profissional" class="nav-link" data-i18n="nav.experience">Experiência</a></li>
+      <li><a href="#educacao" class="nav-link" data-i18n="nav.education">Educação</a></li>
+      <li><a href="#contato" class="nav-link" data-i18n="nav.contact">Contato</a></li>
 
       <li class="theme-item">
         <button id="theme-toggle" class="theme-toggle" aria-label="Alterar tema">
           <i class="fa-solid fa-sun icon sun"></i>
           <i class="fa-solid fa-moon icon moon"></i>
+        </button>
+      </li>
+
+      <li class="theme-item">
+        <button id="lang-toggle" class="theme-toggle" aria-label="Alterar idioma">
+          <img id="lang-flag" src="assets/flags/br.png" alt="Idioma" />
         </button>
       </li>
     </ul>
@@ -47,9 +53,9 @@
       <div class="hero-right">
         <h1 class="hero-title">
           <span class="name">Tayná Vicente Silva</span>
-          <span class="role">Desenvolvedora de Software</span>
+          <span class="role" data-i18n="hero.role">Desenvolvedora de Software</span>
         </h1>
-        <p class="hero-description">
+        <p class="hero-description" data-i18n="hero.description">
           Desenvolvedora Full Stack com experiência em C#, .NET, Node.js e
           React. Atuo na construção e manutenção de aplicações, integrações
           com APIs e soluções escaláveis.
@@ -60,8 +66,8 @@
 
   <section id="projetos" class="section projects-section">
     <div class="container">
-      <h2 class="section-title">Meus Projetos</h2>
-      <p class="section-subtitle">
+      <h2 class="section-title" data-i18n="projects.title">Meus Projetos</h2>
+      <p class="section-subtitle" data-i18n="projects.subtitle">
         Alguns trabalhos que desenvolvi recentemente
       </p>
 
@@ -72,8 +78,8 @@
               <span class="project-tag">C/C++</span>
             </div>
             <div class="project-info">
-              <h3>Simulador Hierarquia de Memoria</h3>
-              <p>
+              <h3 data-i18n="project.memory.title">Simulador Hierarquia de Memoria</h3>
+              <p data-i18n="project.memory.desc">
                 Simulador de Hierarquia de Memória implementado em C/C++,
                 representando cache, memória principal e armazenamento
                 secundário para demonstrar impacto de latência e organização no
@@ -92,8 +98,8 @@
           <span class="project-tag">Frontend</span>
         </div>
         <div class="project-info">
-          <h3>Jogo da Memória</h3>
-          <p>
+          <h3 data-i18n="project.game.title">Jogo da Memória</h3>
+          <p data-i18n="project.game.desc">
             Jogo interativo desenvolvido para exercitar memória e lógica, com
             mecânica de cartas embaralhadas e sistema de comparação de pares.
           </p>
@@ -110,8 +116,8 @@
 
   <section id="habilidades" class="section skills-section">
     <div class="container">
-      <h2 class="section-title">Habilidades</h2>
-      <p class="section-subtitle">
+      <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
+      <p class="section-subtitle" data-i18n="skills.subtitle">
         Tecnologias e ferramentas que utilizo no dia a dia
       </p>
 
@@ -156,8 +162,8 @@
 
   <section id="experiencia-profissional" class="section experience-section">
     <div class="container">
-      <h2 class="section-title">Experiência Profissional</h2>
-      <p class="section-subtitle">Minha trajetória profissional</p>
+      <h2 class="section-title" data-i18n="experience.title">Experiência Profissional</h2>
+      <p class="section-subtitle" data-i18n="experience.subtitle">Minha trajetória profissional</p>
 
       <div class="timeline">
         <div class="timeline-item">
@@ -228,8 +234,8 @@
 
   <section id="educacao" class="section education-section">
     <div class="container">
-      <h2 class="section-title">Educação</h2>
-      <p class="section-subtitle">Formação acadêmica e certificações</p>
+      <h2 class="section-title" data-i18n="education.title">Educação</h2>
+      <p class="section-subtitle" data-i18n="education.subtitle">Formação acadêmica e certificações</p>
 
       <div class="education-grid">
         <div class="education-card">
@@ -275,8 +281,8 @@
 
   <section id="contato" class="section contact-section">
     <div class="container">
-      <h2 class="section-title">Vamos conversar?</h2>
-      <p class="section-subtitle">
+      <h2 class="section-title" data-i18n="contact.title">Vamos conversar?</h2>
+      <p class="section-subtitle" data-i18n="contact.subtitle">
         Entre em contato para projetos, colaborações ou apenas para um café
         virtual
       </p>
@@ -315,15 +321,15 @@
 
         <form class="contact-form">
           <div class="form-group">
-            <input type="text" placeholder="Seu nome" required />
+           <input type="text" placeholder="Seu nome" data-i18n-placeholder="form.name" required />
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Seu email" required />
+            <input type="email" placeholder="Seu email" data-i18n-placeholder="form.email" required />
           </div>
           <div class="form-group">
-            <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+            <textarea placeholder="Sua mensagem" rows="5" data-i18n-placeholder="form.message" required></textarea>
           </div>
-          <button type="submit" class="btn-submit">Enviar mensagem</button>
+          <button type="submit" class="btn-submit" data-i18n="form.submit">Enviar mensagem</button>
         </form>
       </div>
     </div>
@@ -335,6 +341,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/theme.js"></script>
+  <script src="js/i18n.js"></script>
 </body>
 
 </html>
