@@ -38,6 +38,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 24px;
   margin: 0;
   padding: 0;
@@ -54,6 +55,72 @@ body {
 
 .nav-list a:hover {
   color: var(--soft-blue);
+}
+
+.theme-toggle {
+  position: relative;
+  right: auto;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.theme-toggle .icon {
+  position: absolute;
+  font-size: 18px;
+  color: var(--text-dark);
+  position: absolute;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.theme-toggle .moon {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.dark-theme .theme-toggle .sun {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.dark-theme .theme-toggle .moon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.dark-theme .theme-toggle {
+  background: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-theme .theme-toggle .icon {
+  color: #f5f5f5;
+}
+
+.theme-item {
+  right: 20px;
 }
 
 .hamburger {
@@ -74,7 +141,7 @@ body {
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--surface);
+  background: var(--text-dark);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -85,6 +152,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 60px 40px;
+  background-color: var(--surface);
 }
 
 .hero-content {
@@ -227,6 +295,7 @@ body {
   border-radius: 20px;
   font-size: 14px;
   font-weight: 500;
+  background-color: white;
 }
 
 .project-tag {
@@ -611,7 +680,8 @@ footer p {
   }
 
   .nav-list a {
-    display: block;
+    display: inline-block;
+    text-decoration: none;
     padding: 14px 24px;
     font-size: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -751,6 +821,18 @@ footer p {
   }
   footer p {
     font-size: 12px;
+  }
+
+  .theme-item {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+  }
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
   }
 }
 
