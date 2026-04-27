@@ -17,14 +17,14 @@
 
 .nav-brand {
   display: none;
-  color: var(--text);
-  font-family: 'Syne', sans-serif;
+  color: var(--accent);
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0.5px;
 }
 
 .nav-list {
+  margin: 0 auto;
   list-style: none;
   display: flex;
   gap: 8px;
@@ -51,7 +51,7 @@
 }
 
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
