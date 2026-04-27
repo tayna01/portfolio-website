@@ -1,0 +1,71 @@
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(1.4); }
+}
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 900px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  body { padding-top: 64px; }
+  .section { padding: 64px 20px; }
+  .container { padding: 0 16px; }
+  .hero-section { padding: 48px 20px 80px; }
+  .name { font-size: 32px; }
+
+  .projects-grid,
+  .skills-grid,
+  .education-grid { grid-template-columns: 1fr; }
+
+  .timeline { padding-left: 28px; }
+  .timeline-dot { left: -36px; }
+
+  footer { padding: 20px; }
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .nav-brand { display: block; }
+  .hamburger { display: flex; }
+
+  .nav-list {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgba(10, 10, 15, 0.98);
+    flex-direction: column;
+    gap: 0;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-list.open { display: flex; }
+
+  .nav-list a {
+    display: block;
+    padding: 14px 24px;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+}
