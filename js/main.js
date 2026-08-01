@@ -1,76 +1,91 @@
-class App {
-  constructor() {
-    this.navbar = document.getElementById('navbar');
-    this.themeToggle = document.getElementById('theme-toggle');
-    this.body = document.body;
-    this.init();
+(function () {
+  'use strict';
+
+  var CONTACT_EMAIL = 'taynavicente2019@gmail.com';
+
+  var hamburger = document.getElementById('hamburger');
+  var navList = document.getElementById('nav-list');
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-list a'));
+
+  function setMenu(open) {
+    navList.classList.toggle('open', open);
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', String(open));
   }
 
-  init() {
-    this.handleNavbarScroll();
-    this.initObserver();
-    this.initTheme();
-    this.initHamburger();
-  }
+  if (hamburger && navList) {
+    hamburger.addEventListener('click', function () {
+      setMenu(!navList.classList.contains('open'));
+    });
 
-  handleNavbarScroll() {
-    window.addEventListener('scroll', () => {
-      this.navbar.classList.toggle('scrolled', window.scrollY > 20);
+    navLinks.forEach(function (link) {
+      link.addEventListener('click', function () { setMenu(false); });
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!hamburger.contains(event.target) && !navList.contains(event.target)) {
+        setMenu(false);
+      }
     });
   }
 
-  initObserver() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, i * 80);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  }
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
 
-  initTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      this.body.classList.add('light-mode');
-    } else if (!savedTheme && window.matchMedia('(prefers-color-scheme: light)').matches) {
-      this.body.classList.add('light-mode');
-    }
-    this.themeToggle.addEventListener('click', () => {
-      this.body.classList.toggle('light-mode');
-      localStorage.setItem('theme', this.body.classList.contains('light-mode') ? 'light' : 'dark');
+  function updateActiveLink() {
+    if (!sections.length) return;
+
+    var scrollPos = window.scrollY + 100;
+    var currentId = '';
+
+    sections.forEach(function (section) {
+      if (section.offsetTop <= scrollPos) currentId = section.id;
+    });
+
+    navLinks.forEach(function (link) {
+      var isActive = link.getAttribute('href') === '#' + currentId;
+      link.classList.toggle('is-active', isActive);
     });
   }
 
-  initHamburger() {
-    const hamburger = document.getElementById('navbar-hamburger');
-    const navLinks = document.querySelector('.navbar-links');
-    if (!hamburger || !navLinks) return;
-    hamburger.addEventListener('click', () => navLinks.classList.toggle('mobile-open'));
-    navLinks.querySelectorAll('a').forEach(l => {
-      l.addEventListener('click', () => navLinks.classList.remove('mobile-open'));
+  if (sections.length) {
+    window.addEventListener('scroll', updateActiveLink, { passive: true });
+    updateActiveLink();
+  }
+
+  var form = document.getElementById('contact-form');
+  var formStatus = document.getElementById('form-status');
+
+  function showFormStatus(message, isError) {
+    if (!formStatus) return;
+    formStatus.textContent = message;
+    formStatus.classList.toggle('is-error', Boolean(isError));
+    formStatus.classList.add('is-visible');
+  }
+
+  function translateMessage(key, fallback) {
+    return window.I18n && window.I18n.t ? window.I18n.t(key) || fallback : fallback;
+  }
+
+  if (form) {
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var data = new FormData(form);
+      var name = String(data.get('name') || '').trim();
+      var email = String(data.get('email') || '').trim();
+      var message = String(data.get('message') || '').trim();
+
+      if (!name || !email || !message) {
+        showFormStatus(translateMessage('form.error', 'Por favor, preencha todos os campos.'), true);
+        return;
+      }
+
+      var subject = encodeURIComponent('[Portfólio] Contato de ' + name);
+      var body = encodeURIComponent(name + ' (' + email + ')\n\n' + message);
+      window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
+
+      showFormStatus(translateMessage('form.success', 'Obrigada! Seu cliente de e-mail abriu com a mensagem pronta para enviar.'));
+      form.reset();
     });
   }
-
-  static handleSubmit() {
-    const btn = document.querySelector('.contact-submit');
-    btn.textContent = 'Mensagem enviada ✓';
-    btn.style.background = 'var(--green)';
-    btn.style.borderColor = 'var(--green)';
-    btn.style.boxShadow = '0 0 24px rgba(74,222,128,0.3)';
-    setTimeout(() => {
-      btn.textContent = 'Enviar mensagem →';
-      btn.style.background = '';
-      btn.style.borderColor = '';
-      btn.style.boxShadow = '';
-    }, 3000);
-  }
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  new App();
-});
+})();

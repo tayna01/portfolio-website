@@ -1,6 +1,4 @@
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -8,20 +6,39 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 64px;
 }
 
-.theme-btn .sun-icon {
-  display: block;
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-top: 64px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.theme-btn .moon-icon {
-  display: none;
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 200;
 }
 
-body.light-mode .theme-btn .sun-icon {
-  display: none;
-}
-
-body.light-mode .theme-btn .moon-icon {
-  display: block;
+@media (hover: none) {
+  .project-card:hover,
+  .skill-card:hover,
+  .education-card:hover,
+  .timeline-content:hover,
+  .contact-item:hover,
+  .tech-chip:hover,
+  .btn:hover,
+  .btn-submit:hover {
+    transform: none;
+  }
 }

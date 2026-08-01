@@ -1,47 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-
 :root {
-  --bg: #0a0a0b;
-  --bg-card: #111114;
-  --bg-hover: #18181c;
-  --border: #222228;
-  --border-glow: #3a3a4a;
-  --accent: #7c6af7;
-  --accent-soft: #a89cf9;
-  --accent-dim: rgba(124, 106, 247, 0.12);
-  --text-primary: #f0eeff;
-  --text-secondary: #9090a8;
-  --text-muted: #55556a;
-  --green: #4ade80;
-  --tag-bg: #1a1a24;
-  --font-display: 'Syne', sans-serif;
+  --font-heading: 'Syne', sans-serif;
   --font-body: 'DM Mono', monospace;
-  --font-serif: 'Instrument Serif', serif;
-  --radius: 12px;
-  --radius-lg: 20px;
-  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --accent: #5f9300;
+  --accent-rgb: 95, 147, 0;
+  --accent-soft: rgba(95, 147, 0, 0.08);
+  --accent2: #0e86b8;
+  --accent2-rgb: 14, 134, 184;
+
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #eef0f4;
+  --nav-bg: rgba(246, 247, 249, 0.85);
+  --nav-bg-solid: rgba(246, 247, 249, 0.98);
+  --text: #16161f;
+  --muted: #6e6e7a;
+  --border: rgba(22, 22, 31, 0.12);
+  --on-accent: #ffffff;
+  --danger: #e5484d;
+  --shadow: 0 16px 48px rgba(22, 22, 31, 0.08);
 }
 
-:root {
-  --bg: #0a0a0b;
-  --bg-card: #111114;
-  --bg-hover: #18181c;
-  --border: #222228;
-  --border-glow: #3a3a4a;
-  --accent: #7c6af7;
-  --accent-soft: #a89cf9;
-  --accent-dim: rgba(124, 106, 247, 0.12);
-  --text-primary: #f0eeff;
-  --text-secondary: #9090a8;
-  --text-muted: #55556a;
-  --green: #4ade80;
-  --tag-bg: #1a1a24;
-  --font-display: 'Syne', sans-serif;
-  --font-body: 'DM Mono', monospace;
-  --font-serif: 'Instrument Serif', serif;
-  --radius: 12px;
-  --radius-lg: 20px;
-  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+html.dark-theme {
+  --accent: #c8f542;
+  --accent-rgb: 200, 245, 66;
+  --accent-soft: rgba(200, 245, 66, 0.08);
+  --accent2: #42c8f5;
+  --accent2-rgb: 66, 200, 245;
 
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface-2: #16161f;
+  --nav-bg: rgba(10, 10, 15, 0.85);
+  --nav-bg-solid: rgba(10, 10, 15, 0.98);
+  --text: #f0efe8;
+  --muted: #7a7a8a;
+  --border: rgba(255, 255, 255, 0.07);
+  --on-accent: #0a0a0f;
+  --shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
 }
