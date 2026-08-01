@@ -6,15 +6,13 @@
 
   if (!toggle) return;
 
-  var icon = toggle.querySelector('[data-theme-icon]');
-
   function isDark() {
     return document.documentElement.classList.contains('dark-theme');
   }
 
+  // O ícone (sol/lua) alterna via CSS em html.dark-theme — o JS só sincroniza o estado.
   function applyTheme(dark) {
     document.documentElement.classList.toggle('dark-theme', dark);
-    if (icon) icon.textContent = dark ? '🌙' : '☀️';
     toggle.setAttribute('aria-pressed', String(dark));
   }
 

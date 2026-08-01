@@ -3,14 +3,14 @@
   min-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
-  padding: 80px 6vw 100px;
+  padding: clamp(100px, 14vw, 160px) 6vw 120px;
   overflow: hidden;
 }
 
 .hero-content {
   display: grid;
   grid-template-columns: 260px 1fr;
-  gap: 72px;
+  gap: 80px;
   align-items: center;
   width: 100%;
   max-width: 1100px;
@@ -54,6 +54,7 @@
   left: -16px;
   background: var(--accent);
   color: var(--on-accent);
+  font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 500;
   padding: 6px 12px;
@@ -93,34 +94,34 @@
 
 .hero-title {
   font-family: var(--font-heading);
-  line-height: 1;
+  line-height: 0.95;
   opacity: 0;
   animation: fadeUp 0.8s 0.35s ease forwards;
 }
 
 .name {
   display: block;
-  font-size: clamp(20px, 5vw, 42px);
-  font-weight: 800;
-  letter-spacing: -1.5px;
+  font-size: clamp(40px, 8vw, 120px);
+  font-weight: 700;
+  letter-spacing: -3px;
   color: var(--text);
 }
 
 .role {
   display: block;
-  font-size: clamp(20px, 2.5vw, 32px);
+  font-size: clamp(24px, 3.5vw, 52px);
   font-weight: 400;
   color: transparent;
   -webkit-text-stroke: 1px var(--accent);
   letter-spacing: 1px;
-  margin-top: 4px;
+  margin-top: 10px;
 }
 
 .hero-description {
-  font-size: 14.5px;
-  line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.75;
   color: var(--muted);
-  max-width: 520px;
+  max-width: 560px;
   opacity: 0;
   animation: fadeUp 0.8s 0.5s ease forwards;
 }
@@ -140,12 +141,13 @@
 
 .stat-value {
   font-family: var(--font-heading);
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
   color: var(--accent);
 }
 
 .stat-label {
+  font-family: var(--font-mono);
   font-size: 11px;
   color: var(--muted);
   text-transform: uppercase;
@@ -162,6 +164,7 @@
 }
 
 .tech-label {
+  font-family: var(--font-mono);
   font-size: 11px;
   color: var(--muted);
   text-transform: uppercase;
@@ -178,7 +181,10 @@
   border-radius: 8px;
   font-size: 12px;
   color: var(--text);
-  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  transition:
+    border-color var(--speed-fast) ease,
+    background var(--speed-fast) ease,
+    transform var(--speed-fast) var(--ease-out);
   cursor: default;
 }
 
@@ -188,9 +194,18 @@
   transform: translateY(-2px);
 }
 
+.tech-chip:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
 .tech-chip img {
   width: 18px;
   height: 18px;
+  transition: transform var(--speed-fast) var(--ease-out);
+}
+
+.tech-chip:hover img {
+  transform: scale(1.15);
 }
 
 .btn {
@@ -200,12 +215,21 @@
   border-radius: 8px;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s, border-color 0.2s;
+  transition:
+    transform var(--speed-normal) var(--ease-out),
+    box-shadow var(--speed-normal) ease,
+    background var(--speed-normal) ease,
+    color var(--speed-normal) ease,
+    border-color var(--speed-normal) ease;
   display: inline-block;
 }
 
 .btn:hover {
   transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.97);
 }
 
 .btn-primary {
@@ -249,6 +273,7 @@
 }
 
 .marquee-item {
+  font-family: var(--font-mono);
   font-size: 11px;
   color: var(--muted);
   text-transform: uppercase;
@@ -263,7 +288,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 60px 24px 100px;
+    padding: 80px 24px 96px;
     min-height: auto;
   }
 
@@ -300,7 +325,7 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 48px 20px 90px;
+    padding: 64px 20px 88px;
   }
 
   .hero-right { gap: 22px; }
@@ -317,14 +342,14 @@
     left: -8px;
   }
 
-  .hero-description { font-size: 13.5px; }
+  .hero-description { font-size: 14.5px; }
 
   .hero-stats {
     gap: 20px;
   }
 
   .stat-value {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .tech-stack {
@@ -334,6 +359,10 @@
 
 @media (max-width: 640px) {
   .name {
-    font-size: 32px;
+    font-size: clamp(36px, 12vw, 52px);
+  }
+
+  .role {
+    font-size: clamp(20px, 5.5vw, 30px);
   }
 }

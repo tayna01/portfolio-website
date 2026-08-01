@@ -16,6 +16,13 @@
         education: 'Educação',
         contact: 'Contato'
       },
+      kicker: {
+        projects: 'Seleção',
+        skills: 'Ferramentas',
+        experience: 'Trajetória',
+        education: 'Formação',
+        contact: 'Contato'
+      },
       hero: {
         badge: 'Disponível para oportunidades',
         role: 'Software Developer',
@@ -104,7 +111,7 @@
         fallback: 'Não foi possível enviar automaticamente. Seu cliente de e-mail abriu com a mensagem pronta.',
         error: 'Por favor, preencha todos os campos.'
       },
-      footer: { text: '© 2026 Tayná Vicente Silva. Todos os direitos reservados.' }
+      footer: { text: '© 2026 Tayná Vicente Silva. Todos os direitos reservados.', deployPrefix: 'Último deploy:' }
     },
 
     en: {
@@ -116,6 +123,13 @@
         skills: 'Skills',
         experience: 'Experience',
         education: 'Education',
+        contact: 'Contact'
+      },
+      kicker: {
+        projects: 'Selected Work',
+        skills: 'Toolkit',
+        experience: 'Career',
+        education: 'Studies',
         contact: 'Contact'
       },
       hero: {
@@ -206,7 +220,7 @@
         fallback: "Couldn't send automatically. Your email client opened with the message ready to send.",
         error: 'Please fill in all fields.'
       },
-      footer: { text: '© 2026 Tayná Vicente Silva. All rights reserved.' }
+      footer: { text: '© 2026 Tayná Vicente Silva. All rights reserved.', deployPrefix: 'Last deploy:' }
     }
   };
 

@@ -8,9 +8,9 @@ Portfólio pessoal de **Tayná Vicente Silva**, desenvolvedora fullstack.
 .
 ├── assets/          # Imagens (foto de perfil, bandeiras)
 ├── css/             # Estilos separados por responsabilidade
-│   ├── variables.css   # Tokens de design (cores, fontes) — tema claro/escuro
+│   ├── variables.css   # Tokens de design (cores, fontes, movimento) — tema claro/escuro
 │   ├── base.css        # Reset, tipografia e fundo global
-│   ├── animations.css  # Keyframes e prefers-reduced-motion
+│   ├── animations.css  # Keyframes, scroll reveal e prefers-reduced-motion
 │   ├── utilities.css   # Classes utilitárias (container, sr-only, blobs)
 │   ├── nav.css         # Navegação fixa e botões
 │   ├── hero.css        # Seção hero
@@ -19,14 +19,22 @@ Portfólio pessoal de **Tayná Vicente Silva**, desenvolvedora fullstack.
 ├── js/
 │   ├── theme.js       # Alternância de tema (dark/light)
 │   ├── i18n.js        # Internacionalização PT/EN
-│   └── main.js        # Interações: menu, scrollspy e formulário
+│   ├── main.js        # Interações: menu, scrollspy e formulário
+│   ├── reveal.js      # Scroll reveal via Intersection Observer
+│   └── scroll-effects.js # Progresso de scroll + parallax leve (rAF)
+├── scripts/
+│   └── update-deploy-date.js # Atualiza a data de deploy no rodapé
 ├── CNAME             # Domínio personalizado (GitHub Pages)
 └── index.html
 ```
 
 ## Funcionalidades
 
-- **Tema claro/escuro** com persistência em `localStorage` e respeito a `prefers-color-scheme`.
+- **Tema claro/escuro** com persistência em `localStorage` e respeito a `prefers-color-scheme` (ícones sol/lua em SVG).
+- **Scroll reveal** minimalista (fade-in + slide-up) via Intersection Observer, sem bibliotecas e com fallback para `prefers-reduced-motion`.
+- **Scroll-driven**: barra de progresso de scroll e parallax leve no hero via `requestAnimationFrame` (nativo, ~1KB, desativado com `prefers-reduced-motion`).
+- **Tipografia com presença**: títulos grandes (Space Grotesk, até ~120px no hero), kickers editoriais "//" e bastante respiro entre seções.
+- **Microinterações** sutis em hover/press de botões, links, cards e chips (transform + opacity).
 - **Internacionalização PT/EN** com persistência da preferência.
 - **Menu responsivo** com hamburger em telas menores.
 - **Scrollspy** destacando a seção ativa no menu.
@@ -62,3 +70,11 @@ python -m http.server 8000
 ## Deploy
 
 O site é publicado via GitHub Pages no domínio `taynavicente.com.br` (definido no `CNAME`).
+
+Antes de dar push (o GitHub Pages publica no push), atualize a data de deploy no rodapé:
+
+```bash
+node scripts/update-deploy-date.js
+```
+
+O script substitui a data em `index.html` (`<span class="footer-deploy-date">`) pela data de hoje.

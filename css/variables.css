@@ -1,41 +1,54 @@
 :root {
-  --font-heading: 'Syne', sans-serif;
-  --font-body: 'DM Mono', monospace;
+  color-scheme: light;
 
-  --accent: #5f9300;
-  --accent-rgb: 95, 147, 0;
-  --accent-soft: rgba(95, 147, 0, 0.08);
-  --accent2: #0e86b8;
-  --accent2-rgb: 14, 134, 184;
+  /* Tipografia: Space Grotesk (títulos), Inter (corpo), DM Mono (acentos/código) */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'DM Mono', monospace;
 
-  --bg: #f6f7f9;
+  /* Tokens de movimento — usados em todas as transições para manter consistência */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --speed-fast: 0.2s;
+  --speed-normal: 0.3s;
+  --speed-slow: 0.6s;
+
+  /* Paleta feminina: rosa (acento) + lavanda (suporte), com neutros levemente quentes */
+  --accent: #d63d7e;
+  --accent-rgb: 214, 61, 126;
+  --accent-soft: rgba(214, 61, 126, 0.08);
+  --accent2: #7b6cd6;
+  --accent2-rgb: 123, 108, 214;
+
+  --bg: #faf6f8;
   --surface: #ffffff;
-  --surface-2: #eef0f4;
-  --nav-bg: rgba(246, 247, 249, 0.85);
-  --nav-bg-solid: rgba(246, 247, 249, 0.98);
-  --text: #16161f;
-  --muted: #6e6e7a;
-  --border: rgba(22, 22, 31, 0.12);
+  --surface-2: #f6eef2;
+  --nav-bg: rgba(250, 246, 248, 0.85);
+  --nav-bg-solid: rgba(250, 246, 248, 0.98);
+  --text: #21151c;
+  --muted: #7a6672;
+  --border: rgba(33, 21, 28, 0.12);
   --on-accent: #ffffff;
   --danger: #e5484d;
-  --shadow: 0 16px 48px rgba(22, 22, 31, 0.08);
+  --shadow: 0 16px 48px rgba(33, 21, 28, 0.08);
 }
 
 html.dark-theme {
-  --accent: #c8f542;
-  --accent-rgb: 200, 245, 66;
-  --accent-soft: rgba(200, 245, 66, 0.08);
-  --accent2: #42c8f5;
-  --accent2-rgb: 66, 200, 245;
+  color-scheme: dark;
 
-  --bg: #0a0a0f;
-  --surface: #111118;
-  --surface-2: #16161f;
-  --nav-bg: rgba(10, 10, 15, 0.85);
-  --nav-bg-solid: rgba(10, 10, 15, 0.98);
-  --text: #f0efe8;
-  --muted: #7a7a8a;
-  --border: rgba(255, 255, 255, 0.07);
-  --on-accent: #0a0a0f;
+  --accent: #ffa7c9;
+  --accent-rgb: 255, 167, 201;
+  --accent-soft: rgba(255, 167, 201, 0.08);
+  --accent2: #b3a6f2;
+  --accent2-rgb: 179, 166, 242;
+
+  --bg: #0e0a0f;
+  --surface: #161119;
+  --surface-2: #1d1720;
+  --nav-bg: rgba(14, 10, 15, 0.85);
+  --nav-bg-solid: rgba(14, 10, 15, 0.98);
+  --text: #f5eef2;
+  --muted: #8f7f8a;
+  --border: rgba(245, 238, 242, 0.07);
+  --on-accent: #0e0a0f;
   --shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
 }

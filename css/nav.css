@@ -44,7 +44,10 @@
   padding: 6px 14px;
   border-radius: 6px;
   border: 1px solid transparent;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition:
+    color var(--speed-fast) ease,
+    border-color var(--speed-fast) ease,
+    background var(--speed-fast) ease;
 }
 
 .nav-list a:hover,
@@ -71,13 +74,42 @@
   border-radius: 8px;
   color: var(--text);
   cursor: pointer;
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition:
+    color var(--speed-fast) ease,
+    border-color var(--speed-fast) ease,
+    background var(--speed-fast) ease,
+    transform var(--speed-fast) var(--ease-out);
 }
 
 .nav-toggle:hover {
   color: var(--accent);
   border-color: rgba(var(--accent-rgb), 0.35);
   background: var(--accent-soft);
+  transform: translateY(-1px) scale(1.05);
+}
+
+.nav-toggle:active {
+  transform: scale(0.94);
+}
+
+/* Ícones de tema (sol/lua) — troca via CSS quando o tema muda */
+.theme-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-icon .icon-moon { display: none; }
+
+html.dark-theme .theme-icon .icon-sun { display: none; }
+html.dark-theme .theme-icon .icon-moon { display: inline-block; }
+
+.theme-icon svg {
+  transition: transform var(--speed-normal) var(--ease-out);
+}
+
+.nav-toggle:hover .theme-icon svg {
+  transform: scale(1.12);
 }
 
 .nav-toggle img {

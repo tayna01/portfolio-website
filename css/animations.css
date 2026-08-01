@@ -13,11 +13,58 @@
   to   { transform: translateX(-50%); }
 }
 
+/* ============================================================
+   Scroll reveal (Intersection Observer)
+   Elementos começam invisíveis com leve deslocamento e fazem
+   fade-in + slide-up ao entrarem na viewport. A classe
+   .is-visible é adicionada por js/reveal.js.
+   ============================================================ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--speed-slow) var(--ease-out),
+    transform var(--speed-slow) var(--ease-out);
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   Barra de progresso de scroll (sutil, no topo)
+   A escala X é atualizada por js/scroll-effects.js via rAF.
+   ============================================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transform-origin: left center;
+  transform: scaleX(0);
+  z-index: 1001;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  /* Fallback: sem movimento, o conteúdo já nasce visível */
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

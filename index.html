@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Portfólio de Tayná Vicente Silva, desenvolvedora fullstack com experiência em Java, C# e React.js." />
-  <meta name="theme-color" content="#f6f7f9" />
+  <meta name="theme-color" content="#faf6f8" />
   <title data-i18n="meta.title">Tayná - Software Developer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/base.css" />
@@ -38,6 +38,8 @@
 
 <body>
 
+  <div class="scroll-progress" aria-hidden="true"></div>
+
   <nav class="main-nav" aria-label="Navegação principal">
     <span class="nav-brand">Tayná Vicente</span>
 
@@ -51,7 +53,10 @@
 
     <div class="nav-actions">
       <button id="theme-toggle" class="nav-toggle" type="button" aria-label="Alternar tema" aria-pressed="false" data-i18n-aria="theme.toggle">
-        <span class="theme-icon" data-theme-icon aria-hidden="true">☀️</span>
+        <span class="theme-icon" aria-hidden="true">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </span>
       </button>
       <button id="lang-toggle" class="nav-toggle" type="button" aria-label="Mudar idioma" data-i18n-aria="lang.toggle">
         <img id="lang-flag" src="assets/flags/br.png" alt="Português" width="20" height="15" />
@@ -63,13 +68,13 @@
   </nav>
 
   <section class="hero-section">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
+    <div class="blob blob-1" data-parallax="0.12"></div>
+    <div class="blob blob-2" data-parallax="-0.08"></div>
 
     <div class="hero-content">
       <div class="hero-left">
-        <div class="photo-frame">
-          <img src="assets/tayna_perfil.jpg" alt="Tayná Vicente Silva" class="profile-photo" />
+        <div class="photo-frame" data-parallax="0.06">
+          <img src="assets/perfil.jpg" alt="Tayná Vicente Silva" class="profile-photo" />
           <div class="photo-tag">📍 Software Developer</div>
         </div>
       </div>
@@ -93,11 +98,11 @@
 
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-value">2+</span>
+            <span class="stat-value">3+</span>
             <span class="stat-label" data-i18n="hero.statExp">Anos de exp.</span>
           </div>
           <div class="stat">
-            <span class="stat-value">5º</span>
+            <span class="stat-value">3º</span>
             <span class="stat-label" data-i18n="hero.statEdu">Eng. Software</span>
           </div>
           <div class="stat">
@@ -148,12 +153,13 @@
 
   <section id="projetos" class="section projects-section">
     <div class="container">
-      <h2 class="section-title" data-i18n="projects.title">Meus Projetos</h2>
-      <p class="section-subtitle" data-i18n="projects.subtitle">Alguns trabalhos que desenvolvi recentemente</p>
+      <p class="section-kicker" data-reveal data-i18n="kicker.projects">// Seleção</p>
+      <h2 class="section-title" data-reveal data-i18n="projects.title">Meus Projetos</h2>
+      <p class="section-subtitle" data-reveal data-reveal-delay="80" data-i18n="projects.subtitle">Alguns trabalhos que desenvolvi recentemente</p>
 
       <div class="projects-grid">
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #1a2a2a, #0d1f1f);">
+        <div class="project-card" data-reveal>
+          <div class="project-image" style="background: linear-gradient(135deg, #2a1a22, #1f0d18);">
             <span class="project-tag">C/C++</span>
           </div>
           <div class="project-info">
@@ -171,8 +177,8 @@
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-image" style="background: linear-gradient(135deg, #1f1a2a, #160d1f);">
+        <div class="project-card" data-reveal data-reveal-delay="100">
+          <div class="project-image" style="background: linear-gradient(135deg, #241a2b, #150d1f);">
             <span class="project-tag">Backend</span>
           </div>
           <div class="project-info">
@@ -196,11 +202,12 @@
 
   <section id="habilidades" class="section skills-section">
     <div class="container">
-      <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
-      <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologias e ferramentas que utilizo no dia a dia</p>
+      <p class="section-kicker" data-reveal data-i18n="kicker.skills">// Ferramentas</p>
+      <h2 class="section-title" data-reveal data-i18n="skills.title">Habilidades</h2>
+      <p class="section-subtitle" data-reveal data-reveal-delay="80" data-i18n="skills.subtitle">Tecnologias e ferramentas que utilizo no dia a dia</p>
 
       <div class="skills-grid">
-        <div class="skill-card">
+        <div class="skill-card" data-reveal>
           <h3><span class="skill-icon">//</span> <span data-i18n="skills.backend">Backend</span></h3>
           <div class="skill-tags">
             <span>C#</span><span>.NET</span><span>Node.js</span>
@@ -208,7 +215,7 @@
           </div>
         </div>
 
-        <div class="skill-card">
+        <div class="skill-card" data-reveal data-reveal-delay="100">
           <h3><span class="skill-icon">//</span> <span data-i18n="skills.frontend">Frontend</span></h3>
           <div class="skill-tags">
             <span>React</span><span>JavaScript</span><span>HTML</span>
@@ -216,7 +223,7 @@
           </div>
         </div>
 
-        <div class="skill-card">
+        <div class="skill-card" data-reveal data-reveal-delay="200">
           <h3><span class="skill-icon">//</span> <span data-i18n="skills.tools">Ferramentas &amp; Banco de Dados</span></h3>
           <div class="skill-tags">
             <span>MySQL</span><span>PostgreSQL</span>
@@ -229,11 +236,12 @@
 
   <section id="experiencia-profissional" class="section experience-section">
     <div class="container">
-      <h2 class="section-title" data-i18n="experience.title">Experiência Profissional</h2>
-      <p class="section-subtitle" data-i18n="experience.subtitle">Minha trajetória profissional</p>
+      <p class="section-kicker" data-reveal data-i18n="kicker.experience">// Trajetória</p>
+      <h2 class="section-title" data-reveal data-i18n="experience.title">Experiência Profissional</h2>
+      <p class="section-subtitle" data-reveal data-reveal-delay="80" data-i18n="experience.subtitle">Minha trajetória profissional</p>
 
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item" data-reveal>
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-date" data-i18n="experience.junior2.date">Mai 2025 - Presente</div>
@@ -251,7 +259,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-reveal data-reveal-delay="100">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-date" data-i18n="experience.junior1.date">Jun 2024 - Out 2024</div>
@@ -268,7 +276,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item" data-reveal data-reveal-delay="200">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <div class="timeline-date" data-i18n="experience.trainee.date">Mar 2024 - Mai 2024</div>
@@ -290,11 +298,12 @@
 
   <section id="educacao" class="section education-section">
     <div class="container">
-      <h2 class="section-title" data-i18n="education.title">Educação</h2>
-      <p class="section-subtitle" data-i18n="education.subtitle">Formação acadêmica e certificações</p>
+      <p class="section-kicker" data-reveal data-i18n="kicker.education">// Formação</p>
+      <h2 class="section-title" data-reveal data-i18n="education.title">Educação</h2>
+      <p class="section-subtitle" data-reveal data-reveal-delay="80" data-i18n="education.subtitle">Formação acadêmica e certificações</p>
 
       <div class="education-grid">
-        <div class="education-card">
+        <div class="education-card" data-reveal>
           <span class="education-icon">🎓</span>
           <h3 data-i18n="education.bachelors.degree">Bacharelado em Engenharia de Software</h3>
           <h4>Instituto Federal do Paraná — Campus Paranavaí</h4>
@@ -305,7 +314,7 @@
           </p>
         </div>
 
-        <div class="education-card">
+        <div class="education-card" data-reveal data-reveal-delay="100">
           <span class="education-icon">💻</span>
           <h3 data-i18n="education.technical.degree">Técnico em Informática</h3>
           <h4>Instituto Federal do Paraná — Campus Paranavaí</h4>
@@ -316,7 +325,7 @@
           </p>
         </div>
 
-        <div class="education-card">
+        <div class="education-card" data-reveal data-reveal-delay="200">
           <span class="education-icon">📜</span>
           <h3 data-i18n="education.certification.degree">Scrum Foundation Professional Certification (SFPC)</h3>
           <h4>Certiprof</h4>
@@ -332,13 +341,14 @@
 
   <section id="contato" class="section contact-section">
     <div class="container">
-      <h2 class="section-title" data-i18n="contact.title">Vamos conversar?</h2>
-      <p class="section-subtitle" data-i18n="contact.subtitle">
+      <p class="section-kicker" data-reveal data-i18n="kicker.contact">// Contato</p>
+      <h2 class="section-title" data-reveal data-i18n="contact.title">Vamos conversar?</h2>
+      <p class="section-subtitle" data-reveal data-reveal-delay="80" data-i18n="contact.subtitle">
         Entre em contato para projetos, colaborações ou apenas para um café virtual
       </p>
 
       <div class="contact-content">
-        <div class="contact-info">
+        <div class="contact-info" data-reveal>
           <div class="contact-item">
             <span class="contact-icon">📧</span>
             <div>
@@ -369,7 +379,7 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contact-form" novalidate data-access-key="6132198e-6d38-427c-b04a-52c8cece3d6e">
+        <form class="contact-form" id="contact-form" novalidate data-access-key="6132198e-6d38-427c-b04a-52c8cece3d6e" data-reveal data-reveal-delay="120">
           <div class="form-group">
             <label class="sr-only" for="contact-name" data-i18n="form.name">Seu nome</label>
             <input type="text" id="contact-name" name="name" placeholder="Seu nome" data-i18n-placeholder="form.name" autocomplete="name" required />
@@ -392,11 +402,21 @@
 
   <footer>
     <p data-i18n="footer.text">© 2026 Tayná Vicente Silva. Todos os direitos reservados.</p>
+    <p class="footer-deploy">
+      <span data-i18n="footer.deployPrefix">Último deploy:</span>
+      <span class="footer-deploy-date">01/08/2026</span>
+    </p>
   </footer>
+
+  <noscript>
+    <style>[data-reveal] { opacity: 1 !important; transform: none !important; }</style>
+  </noscript>
 
   <script src="js/theme.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/scroll-effects.js"></script>
 </body>
 
 </html>

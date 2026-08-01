@@ -1,21 +1,40 @@
 .section {
-  padding: 100px 40px;
+  /* Respiro generoso entre seções, no espírito "editorial" do estilo de referência */
+  padding: clamp(120px, 16vw, 180px) 40px;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
+/* Rótulo pequeno acima do título (ex.: "// Trabalhos") — dá presença editorial */
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.section-kicker::before {
+  content: '//';
+  margin-right: 8px;
+  opacity: 0.6;
+}
+
 .section-title {
   font-family: var(--font-heading);
-  font-size: clamp(20px, 5vw, 42px);
-  font-weight: 800;
+  font-size: clamp(32px, 6vw, 68px);
+  font-weight: 700;
   color: var(--text);
   text-align: center;
-  margin-bottom: 12px;
-  letter-spacing: -1px;
+  margin-bottom: 16px;
+  letter-spacing: -2px;
+  line-height: 1.1;
 }
 
 .section-title span {
@@ -23,10 +42,11 @@
 }
 
 .section-subtitle {
-  font-size: 13px;
+  font-family: var(--font-mono);
+  font-size: 14px;
   color: var(--muted);
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 88px;
   letter-spacing: 1px;
 }
 
@@ -34,6 +54,7 @@
   display: inline-flex;
   padding: 5px 12px;
   border-radius: 6px;
+  font-family: var(--font-mono);
   font-size: 12px;
   border: 1px solid var(--border);
   color: var(--muted);

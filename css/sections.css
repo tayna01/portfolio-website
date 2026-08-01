@@ -11,13 +11,16 @@
   border: 1px solid var(--border);
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform var(--speed-normal) var(--ease-out),
+    border-color var(--speed-normal) ease,
+    box-shadow var(--speed-normal) ease;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: rgba(var(--accent-rgb), 0.3);
-  box-shadow: 0 16px 48px rgba(var(--accent-rgb), 0.06);
+  box-shadow: 0 16px 48px rgba(var(--accent-rgb), 0.08);
 }
 
 .project-image {
@@ -32,6 +35,7 @@
   background: rgba(var(--accent-rgb), 0.15);
   border: 1px solid rgba(var(--accent-rgb), 0.3);
   color: var(--accent);
+  font-family: var(--font-mono);
   padding: 7px 18px;
   border-radius: 99px;
   font-size: 12px;
@@ -65,12 +69,22 @@
 .project-tech span {
   padding: 5px 12px;
   border-radius: 6px;
+  font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 500;
   border: 1px solid var(--border);
   color: var(--accent2);
   background: rgba(var(--accent2-rgb), 0.05);
   letter-spacing: 0.5px;
+  transition:
+    color var(--speed-fast) ease,
+    border-color var(--speed-fast) ease,
+    transform var(--speed-fast) var(--ease-out);
+}
+
+.project-tech span:hover {
+  border-color: rgba(var(--accent2-rgb), 0.4);
+  transform: translateY(-1px);
 }
 
 .skills-section { background: var(--bg); }
@@ -86,7 +100,9 @@
   border-radius: 16px;
   background: var(--surface);
   border: 1px solid var(--border);
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition:
+    border-color var(--speed-normal) ease,
+    transform var(--speed-normal) var(--ease-out);
 }
 
 .skill-card:hover {
@@ -107,7 +123,7 @@
 
 .skill-icon {
   color: var(--accent);
-  font-family: var(--font-body);
+  font-family: var(--font-mono);
   font-size: 14px;
 }
 
@@ -120,17 +136,23 @@
 .skill-tags span {
   background: var(--surface-2);
   color: var(--muted);
+  font-family: var(--font-mono);
   padding: 6px 14px;
   border-radius: 6px;
   font-size: 12px;
   border: 1px solid var(--border);
-  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  transition:
+    color var(--speed-fast) ease,
+    border-color var(--speed-fast) ease,
+    background var(--speed-fast) ease,
+    transform var(--speed-fast) var(--ease-out);
 }
 
 .skill-tags span:hover {
   color: var(--accent);
   border-color: rgba(var(--accent-rgb), 0.3);
   background: var(--accent-soft);
+  transform: translateY(-1px);
 }
 
 .experience-section { background: var(--surface); }
@@ -170,11 +192,16 @@
   border: 1px solid var(--border);
   padding: 28px;
   border-radius: 14px;
-  transition: border-color 0.3s ease;
+  transition:
+    border-color var(--speed-normal) ease,
+    transform var(--speed-normal) var(--ease-out),
+    box-shadow var(--speed-normal) ease;
 }
 
 .timeline-content:hover {
   border-color: rgba(var(--accent-rgb), 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(var(--accent-rgb), 0.06);
 }
 
 .timeline-date {
@@ -182,6 +209,7 @@
   background: rgba(var(--accent-rgb), 0.1);
   border: 1px solid rgba(var(--accent-rgb), 0.25);
   color: var(--accent);
+  font-family: var(--font-mono);
   padding: 5px 14px;
   border-radius: 99px;
   font-size: 12px;
@@ -221,6 +249,7 @@
 .timeline-tags span {
   padding: 5px 12px;
   border-radius: 6px;
+  font-family: var(--font-mono);
   font-size: 11px;
   border: 1px solid var(--border);
   color: var(--muted);
@@ -241,7 +270,9 @@
   padding: 36px 28px;
   border-radius: 16px;
   text-align: center;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  transition:
+    border-color var(--speed-normal) ease,
+    transform var(--speed-normal) var(--ease-out);
 }
 
 .education-card:hover {
@@ -276,6 +307,7 @@
   background: rgba(var(--accent-rgb), 0.08);
   border: 1px solid rgba(var(--accent-rgb), 0.2);
   color: var(--accent);
+  font-family: var(--font-mono);
   padding: 5px 14px;
   border-radius: 99px;
   font-size: 11px;
@@ -327,16 +359,20 @@
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--bg);
-  transition: border-color 0.2s ease;
+  transition:
+    border-color var(--speed-fast) ease,
+    transform var(--speed-fast) var(--ease-out);
 }
 
 .contact-item:hover {
   border-color: rgba(var(--accent-rgb), 0.25);
+  transform: translateX(4px);
 }
 
 .contact-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
 
 .contact-item h4 {
+  font-family: var(--font-mono);
   font-size: 10px;
   font-weight: 500;
   color: var(--accent);
@@ -349,7 +385,7 @@
   color: var(--text);
   text-decoration: none;
   font-size: 13px;
-  transition: color 0.2s ease;
+  transition: color var(--speed-fast) ease;
   word-break: break-all;
 }
 
@@ -371,7 +407,7 @@
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
-  transition: border-color 0.2s ease;
+  transition: border-color var(--speed-fast) ease, box-shadow var(--speed-fast) ease;
   resize: vertical;
 }
 
@@ -384,6 +420,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: rgba(var(--accent-rgb), 0.5);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 .btn-submit {
@@ -396,13 +433,25 @@
   font-family: var(--font-body);
   font-weight: 600;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform var(--speed-normal) var(--ease-out),
+    box-shadow var(--speed-normal) ease;
   box-shadow: 0 0 24px rgba(var(--accent-rgb), 0.2);
 }
 
 .btn-submit:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.35);
+}
+
+.btn-submit:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  transform: none;
 }
 
 .form-status {
@@ -419,15 +468,27 @@ footer {
   border-top: 1px solid var(--border);
   padding: 24px 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 6px;
   background: var(--bg);
 }
 
 footer p {
   color: var(--muted);
+  font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 1px;
+}
+
+.footer-deploy {
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.footer-deploy-date {
+  color: var(--accent);
 }
 
 @media (max-width: 900px) {
@@ -438,8 +499,10 @@ footer p {
 }
 
 @media (max-width: 640px) {
-  .section { padding: 64px 20px; }
+  .section { padding: 88px 20px; }
   .container { padding: 0 16px; }
+
+  .section-subtitle { margin-bottom: 64px; }
 
   .projects-grid,
   .skills-grid,
