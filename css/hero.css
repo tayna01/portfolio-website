@@ -1,9 +1,9 @@
 .hero-section {
   position: relative;
-  min-height: calc(100vh - 64px);
+  min-height: min(calc(100vh - 64px), 640px);
   display: flex;
   align-items: center;
-  padding: clamp(100px, 14vw, 160px) 6vw 120px;
+  padding: clamp(32px, 4vw, 56px) 6vw 104px;
   overflow: hidden;
 }
 
@@ -288,7 +288,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 80px 24px 96px;
+    padding: 32px 24px 96px;
     min-height: auto;
   }
 
@@ -325,7 +325,7 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 64px 20px 88px;
+    padding: 32px 20px 88px;
   }
 
   .hero-right { gap: 22px; }

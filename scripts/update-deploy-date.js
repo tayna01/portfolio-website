@@ -25,14 +25,18 @@ try {
   process.exit(1);
 }
 
-const updated = html.replace(
-  /(<span class="footer-deploy-date">)\d{2}\/\d{2}\/\d{4}(<\/span>)/,
-  '$1' + date + '$2'
-);
+const pattern = /(<span class="footer-deploy-date">)\d{2}\/\d{2}\/\d{4}(<\/span>)/;
 
-if (updated === html) {
+if (!pattern.test(html)) {
   console.error('Data de deploy nao encontrada em index.html.');
   process.exit(1);
+}
+
+const updated = html.replace(pattern, '$1' + date + '$2');
+
+if (updated === html) {
+  console.log('Data de deploy ja esta atualizada (' + date + '). Nada a fazer.');
+  process.exit(0);
 }
 
 fs.writeFileSync(indexPath, updated);

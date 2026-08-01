@@ -1,6 +1,3 @@
-This favicon was generated using the following font:
+Favicon do monograma "T" (Tayná), com gradiente rosa (#d63d7e) → lavanda (#7b6cd6), alinhado à paleta do site.
 
-- Font Title: Leckerli One
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/leckerlione/v21/V8mCoQH8VCsNttEnxnGQ-1itLZxcBtItFw.ttf
-- Font License: undefined)
+Formatos: favicon.svg (manual) e PNG/ICO gerados via PowerShell + System.Drawing.
