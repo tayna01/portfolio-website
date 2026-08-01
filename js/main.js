@@ -55,6 +55,8 @@
   var form = document.getElementById('contact-form');
   var formStatus = document.getElementById('form-status');
 
+  var EMAIL_API_ENDPOINT = 'https://api.web3forms.com/submit';
+
   function showFormStatus(message, isError) {
     if (!formStatus) return;
     formStatus.textContent = message;
@@ -66,7 +68,23 @@
     return window.I18n && window.I18n.t ? window.I18n.t(key) || fallback : fallback;
   }
 
+  function openMailtoClient(name, email, message) {
+    var subject = encodeURIComponent('[Portfólio] Contato de ' + name);
+    var body = encodeURIComponent(name + ' (' + email + ')\n\n' + message);
+    window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
+  }
+
+  function submitToEmailApi(payload) {
+    return fetch(EMAIL_API_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (response) { return response.json(); });
+  }
+
   if (form) {
+    var submitBtn = form.querySelector('.btn-submit');
+
     form.addEventListener('submit', function (event) {
       event.preventDefault();
 
@@ -80,12 +98,28 @@
         return;
       }
 
-      var subject = encodeURIComponent('[Portfólio] Contato de ' + name);
-      var body = encodeURIComponent(name + ' (' + email + ')\n\n' + message);
-      window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
+      if (data.get('botcheck')) return;
 
-      showFormStatus(translateMessage('form.success', 'Obrigada! Seu cliente de e-mail abriu com a mensagem pronta para enviar.'));
-      form.reset();
+      submitBtn.disabled = true;
+      showFormStatus(translateMessage('form.sending', 'Enviando...'));
+
+      submitToEmailApi({
+        access_key: form.getAttribute('data-access-key') || '',
+        subject: translateMessage('form.subjectPrefix', '[Portfólio] Novo contato') + ': ' + name,
+        name: name,
+        email: email,
+        message: message
+      }).then(function (result) {
+        if (!result.success) throw new Error(result.message || 'API error');
+        showFormStatus(translateMessage('form.success', 'Mensagem enviada com sucesso!'));
+        form.reset();
+      }).catch(function () {
+        openMailtoClient(name, email, message);
+        showFormStatus(translateMessage('form.fallback', 'Não foi possível enviar automaticamente. Seu cliente de e-mail abriu com a mensagem pronta.'));
+        form.reset();
+      }).then(function () {
+        submitBtn.disabled = false;
+      });
     });
   }
 })();

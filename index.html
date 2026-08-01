@@ -369,7 +369,7 @@
           </div>
         </div>
 
-        <form class="contact-form" id="contact-form" novalidate>
+        <form class="contact-form" id="contact-form" novalidate data-access-key="6132198e-6d38-427c-b04a-52c8cece3d6e">
           <div class="form-group">
             <label class="sr-only" for="contact-name" data-i18n="form.name">Seu nome</label>
             <input type="text" id="contact-name" name="name" placeholder="Seu nome" data-i18n-placeholder="form.name" autocomplete="name" required />
@@ -382,6 +382,7 @@
             <label class="sr-only" for="contact-message" data-i18n="form.message">Sua mensagem</label>
             <textarea id="contact-message" name="message" rows="5" placeholder="Sua mensagem" data-i18n-placeholder="form.message" required></textarea>
           </div>
+          <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button type="submit" class="btn-submit" data-i18n="form.submit">Enviar mensagem</button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>

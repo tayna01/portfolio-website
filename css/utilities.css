@@ -52,6 +52,10 @@
   border: 0;
 }
 
+.hp-field {
+  display: none;
+}
+
 .blob {
   position: absolute;
   border-radius: 50%;

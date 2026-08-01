@@ -98,7 +98,10 @@
         email: 'Seu email',
         message: 'Sua mensagem',
         submit: 'Enviar mensagem',
-        success: 'Obrigada! Seu cliente de e-mail abriu com a mensagem pronta para enviar.',
+        sending: 'Enviando...',
+        subjectPrefix: '[Portfólio] Novo contato',
+        success: 'Mensagem enviada com sucesso!',
+        fallback: 'Não foi possível enviar automaticamente. Seu cliente de e-mail abriu com a mensagem pronta.',
         error: 'Por favor, preencha todos os campos.'
       },
       footer: { text: '© 2026 Tayná Vicente Silva. Todos os direitos reservados.' }
@@ -197,7 +200,10 @@
         email: 'Your email',
         message: 'Your message',
         submit: 'Send message',
-        success: 'Thanks! Your email client opened with the message ready to send.',
+        sending: 'Sending...',
+        subjectPrefix: '[Portfolio] New contact',
+        success: 'Message sent successfully!',
+        fallback: "Couldn't send automatically. Your email client opened with the message ready to send.",
         error: 'Please fill in all fields.'
       },
       footer: { text: '© 2026 Tayná Vicente Silva. All rights reserved.' }

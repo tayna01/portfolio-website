@@ -30,8 +30,25 @@ Portfólio pessoal de **Tayná Vicente Silva**, desenvolvedora fullstack.
 - **Internacionalização PT/EN** com persistência da preferência.
 - **Menu responsivo** com hamburger em telas menores.
 - **Scrollspy** destacando a seção ativa no menu.
-- **Formulário de contato** que abre o cliente de e-mail com a mensagem pronta.
+- **Formulário de contato** que envia via Web3Forms (com `mailto:` como fallback).
 - Suporte a **prefers-reduced-motion**.
+
+## Envio de e-mail (Web3Forms)
+
+O formulário de contato envia a mensagem pela API gratuita do [Web3Forms](https://web3forms.com) e, se o envio falhar, abre o cliente de e-mail (`mailto:`) como fallback.
+
+Para ativar:
+
+1. Acesse [web3forms.com](https://web3forms.com) e gere uma **access key** gratuita (basta confirmar seu e-mail).
+2. Em `index.html`, substitua o valor do atributo `data-access-key` do formulário:
+
+```html
+<form ... data-access-key="6132198e-6d38-427c-b04a-52c8cece3d6e">
+```
+
+3. Configure em `js/main.js` a constante `CONTACT_EMAIL` (destinatário do fallback) se necessário.
+
+> A access key é pública por design (o serviço é feito para uso client-side). Não inclua ali senhas ou credenciais SMTP.
 
 ## Como executar
 
