@@ -4,13 +4,20 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'DM Mono', monospace;
+  font-family: var(--font-body);
+  line-height: 1.5;
   min-height: 100vh;
   overflow-x: hidden;
   padding-top: 64px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body::before {
@@ -21,4 +28,17 @@ body::before {
   opacity: 0.025;
   pointer-events: none;
   z-index: 200;
+}
+
+@media (hover: none) {
+  .project-card:hover,
+  .skill-card:hover,
+  .education-card:hover,
+  .timeline-content:hover,
+  .contact-item:hover,
+  .tech-chip:hover,
+  .btn:hover,
+  .btn-submit:hover {
+    transform: none;
+  }
 }

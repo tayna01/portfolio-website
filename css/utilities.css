@@ -9,7 +9,7 @@
 }
 
 .section-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-heading);
   font-size: clamp(20px, 5vw, 42px);
   font-weight: 800;
   color: var(--text);
@@ -37,7 +37,19 @@
   font-size: 12px;
   border: 1px solid var(--border);
   color: var(--muted);
-  background: rgba(255,255,255,0.03);
+  background: var(--surface-2);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .blob {

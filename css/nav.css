@@ -4,13 +4,14 @@
   left: 0;
   right: 0;
   height: 64px;
-  background: rgba(10, 10, 15, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   padding: 0 24px;
   z-index: 1000;
 }
@@ -18,9 +19,11 @@
 .nav-brand {
   display: none;
   color: var(--accent);
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .nav-list {
@@ -44,14 +47,48 @@
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
 
-.nav-list a:hover {
-  color: #c8f542;
-  border-color: rgba(200, 245, 66, 0.25);
-  background: rgba(200, 245, 66, 0.05);
+.nav-list a:hover,
+.nav-list a.is-active {
+  color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.25);
+  background: var(--accent-soft);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.nav-toggle:hover {
+  color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.35);
+  background: var(--accent-soft);
+}
+
+.nav-toggle img {
+  display: block;
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
 }
 
 .hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
@@ -74,7 +111,22 @@
 .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 768px) {
-  .nav-brand { display: block; }
+  .main-nav {
+    gap: 8px;
+    padding: 0 16px;
+  }
+
+  .nav-brand {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-actions { gap: 8px; }
+  .nav-toggle { width: 40px; height: 40px; }
+
   .hamburger { display: flex; }
 
   .nav-list {
@@ -83,8 +135,11 @@
     top: 64px;
     left: 0;
     width: 100%;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 999;
-    background: rgba(10, 10, 15, 0.98);
+    background: var(--nav-bg-solid);
     flex-direction: column;
     gap: 0;
     padding: 12px 0;
