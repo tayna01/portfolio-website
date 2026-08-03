@@ -44,8 +44,13 @@
         subtitle: 'Alguns trabalhos que desenvolvi recentemente',
         simulatorTitle: 'Simulador Hierarquia',
         simulatorDesc: 'Simulador de Hierarquia de Memória implementado em C/C++, representando cache, memória principal e armazenamento secundário para demonstrar impacto de latência e organização no desempenho do sistema.',
-        eventsTitle: 'Gestão de Eventos',
-        eventsDesc: 'Aplicação backend para gerenciamento de eventos desenvolvida em Java com Hibernate, implementando persistência de dados, mapeamento ORM e operações CRUD para controle de participantes e eventos.'
+        fitnessTitle: 'Fitness App',
+        fitnessDesc: 'Aplicativo mobile desenvolvido em Flutter com arquitetura organizada em camadas — models, screens, widgets e rotas — pensada para facilitar manutenção e evolução do app.',
+        memoryTitle: 'Jogo da Memória',
+        memoryDesc: 'Jogo da memória clássico construído com HTML, CSS e JavaScript puro, com embaralhamento de cartas e interface responsiva.',
+        financeTitle: 'Sistema Financeiro',
+        financeDesc: 'Sistema financeiro desenvolvido em Java como projeto de estudo, aplicando orientação a objetos na estruturação do domínio e persistência de dados.',
+        viewRepo: 'Ver no GitHub'
       },
       skills: {
         title: 'Habilidades',
@@ -164,8 +169,13 @@
         subtitle: 'Some projects I have recently developed',
         simulatorTitle: 'Memory Hierarchy Simulator',
         simulatorDesc: 'Memory hierarchy simulator implemented in C/C++, representing cache, main memory and secondary storage to demonstrate the impact of latency and organization on system performance.',
-        eventsTitle: 'Event Management',
-        eventsDesc: 'Backend application for event management developed in Java with Hibernate, implementing data persistence, ORM mapping and CRUD operations to control participants and events.'
+        fitnessTitle: 'Fitness App',
+        fitnessDesc: 'Mobile app developed in Flutter with a layered architecture — models, screens, widgets and routes — designed for easy maintenance and evolution.',
+        memoryTitle: 'Memory Game',
+        memoryDesc: 'Classic memory game built with plain HTML, CSS and JavaScript, with shuffled cards and a responsive interface.',
+        financeTitle: 'Financial System',
+        financeDesc: 'Financial system developed in Java as a study project, applying object-oriented programming to domain structure and data persistence.',
+        viewRepo: 'View on GitHub'
       },
       skills: {
         title: 'Skills',

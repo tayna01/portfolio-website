@@ -2,7 +2,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
 }
 
@@ -24,23 +24,79 @@
 }
 
 .project-image {
-  height: 180px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.16), rgba(var(--accent2-rgb), 0.12));
+  transition: background var(--speed-normal) ease;
+}
+
+.project-image--alt {
+  background: linear-gradient(135deg, rgba(var(--accent2-rgb), 0.16), rgba(var(--accent-rgb), 0.12));
+}
+
+.project-card:hover .project-image {
+  background: linear-gradient(135deg, rgba(var(--accent-rgb), 0.24), rgba(var(--accent2-rgb), 0.18));
+}
+
+.project-card:hover .project-image--alt {
+  background: linear-gradient(135deg, rgba(var(--accent2-rgb), 0.24), rgba(var(--accent-rgb), 0.18));
+}
+
+.project-image::before,
+.project-image::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.project-image::before {
+  width: 220px;
+  height: 220px;
+  background: var(--accent);
+  opacity: 0.16;
+  top: -80px;
+  right: -60px;
+}
+
+.project-image::after {
+  width: 180px;
+  height: 180px;
+  background: var(--accent2);
+  opacity: 0.14;
+  bottom: -70px;
+  left: -50px;
+}
+
+.project-index {
+  position: absolute;
+  top: 18px;
+  left: 22px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: var(--accent);
+  opacity: 0.6;
 }
 
 .project-tag {
-  background: rgba(var(--accent-rgb), 0.15);
-  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  position: relative;
+  background: var(--surface);
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
   color: var(--accent);
   font-family: var(--font-mono);
-  padding: 7px 18px;
+  padding: 8px 20px;
   border-radius: 99px;
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
+  box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.1);
 }
 
 .project-info { padding: 28px; }
@@ -85,6 +141,32 @@
 .project-tech span:hover {
   border-color: rgba(var(--accent2-rgb), 0.4);
   transform: translateY(-1px);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color var(--speed-fast) ease;
+}
+
+.project-link::after {
+  content: ' →';
+  transition: transform var(--speed-fast) var(--ease-out);
+  display: inline-block;
+}
+
+.project-link:hover {
+  color: var(--accent2);
+}
+
+.project-link:hover::after {
+  transform: translateX(3px);
 }
 
 .skills-section { background: var(--bg); }
