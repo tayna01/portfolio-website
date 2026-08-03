@@ -25,8 +25,8 @@
       },
       hero: {
         badge: 'Disponível para oportunidades',
-        role: 'Software Developer',
-        description: 'Desenvolvedora fullstack com experiência prática em Java, C# e React.js. Foco em arquitetura bem definida, código organizado e soluções escaláveis — do backend ao frontend, com responsabilidade técnica e visão estratégica.',
+        role: 'Desenvolvedora de Software',
+        description: 'Desenvolvedora fullstack com experiência prática em Java, C# e React.js. Foco em arquitetura bem definida, código organizado e soluções escaláveis - do backend ao frontend, com responsabilidade técnica e visão estratégica.',
         statExp: 'Anos de exp.',
         statEdu: 'Eng. Software',
         statStack: 'Stack',
