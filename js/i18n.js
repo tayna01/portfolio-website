@@ -57,8 +57,13 @@
       experience: {
         title: 'Experiência Profissional',
         subtitle: 'Minha trajetória profissional',
+        junior3: {
+          date: 'Mar 2026 - Presente',
+          role: 'Programadora Júnior III',
+          desc: 'Responsável por entregas ponta a ponta em sistemas corporativos: desenvolvimento de novas funcionalidades, integrações com APIs e refinamento contínuo de aplicações web. Autonomia crescente em decisões técnicas, revisão de código e apoio na evolução da arquitetura.'
+        },
         junior2: {
-          date: 'Mai 2025 - Presente',
+          date: 'Nov 2024 - Fev 2026',
           role: 'Programadora Júnior II',
           desc: 'Desenvolvimento e manutenção de aplicações web, implementação de novas funcionalidades, integrações com APIs e melhorias evolutivas em sistemas corporativos. Atuação com foco em qualidade de código, versionamento e colaboração em equipe.'
         },
@@ -166,8 +171,13 @@
       experience: {
         title: 'Professional Experience',
         subtitle: 'My professional journey',
+        junior3: {
+          date: 'Mar 2026 - Present',
+          role: 'Junior Developer III',
+          desc: 'Responsible for end-to-end deliveries in enterprise systems: development of new features, API integrations and continuous refinement of web applications. Growing autonomy in technical decisions, code review and support in architecture evolution.'
+        },
         junior2: {
-          date: 'May 2025 - Present',
+          date: 'Nov 2024 - Feb 2026',
           role: 'Junior Developer II',
           desc: 'Development and maintenance of web applications, implementation of new features, API integrations and evolutionary improvements in enterprise systems. Focused on code quality, versioning and team collaboration.'
         },
