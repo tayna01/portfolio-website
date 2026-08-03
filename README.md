@@ -1,6 +1,6 @@
 # Portfolio — Tayná Vicente
 
-Portfólio pessoal de **Tayná Vicente Silva**, desenvolvedora fullstack.
+Olá, pessoal! Sejam bem-vindos ao meu portfólio! 😊
 
 ## Estrutura
 
