@@ -82,16 +82,22 @@
         title: 'Educação',
         subtitle: 'Formação acadêmica e certificações',
         bachelors: {
+          kicker: '// Bacharelado',
+          status: 'Em andamento',
           degree: 'Bacharelado em Engenharia de Software',
           date: 'Fev 2024 - Dez 2027 (Em andamento)',
           desc: 'Formação focada em engenharia de requisitos, arquitetura de software, banco de dados, desenvolvimento web e metodologias ágeis.'
         },
         technical: {
+          kicker: '// Técnico',
+          status: 'Concluído',
           degree: 'Técnico em Informática',
           date: 'Fev 2020 - Dez 2023',
           desc: 'Formação técnica com base sólida em lógica de programação, desenvolvimento em Java, HTML, CSS e fundamentos de sistemas computacionais.'
         },
         certification: {
+          kicker: '// Certificação',
+          status: 'Ativa',
           degree: 'Scrum Foundation Professional Certification (SFPC)',
           date: 'Emitido em Nov 2024 · Expira em Nov 2027',
           desc: 'Certificação internacional em fundamentos do framework Scrum, abordando papéis, eventos, artefatos e práticas ágeis para gestão de projetos.'
@@ -196,16 +202,22 @@
         title: 'Education',
         subtitle: 'Academic background and certifications',
         bachelors: {
+          kicker: '// Bachelor',
+          status: 'In progress',
           degree: "Bachelor's Degree in Software Engineering",
           date: 'Feb 2024 - Dec 2027 (In progress)',
           desc: 'Education focused on requirements engineering, software architecture, databases, web development and agile methodologies.'
         },
         technical: {
+          kicker: '// Technical',
+          status: 'Completed',
           degree: 'Computer Science Technician',
           date: 'Feb 2020 - Dec 2023',
           desc: 'Technical education with a solid foundation in programming logic, Java development, HTML, CSS and fundamentals of computer systems.'
         },
         certification: {
+          kicker: '// Certification',
+          status: 'Active',
           degree: 'Scrum Foundation Professional Certification (SFPC)',
           date: 'Issued Nov 2024 · Expires Nov 2027',
           desc: 'International certification in Scrum framework fundamentals, covering roles, events, artifacts and agile practices for project management.'
