@@ -42,14 +42,8 @@
       projects: {
         title: 'Meus Projetos',
         subtitle: 'Alguns trabalhos que desenvolvi recentemente',
-        simulatorTitle: 'Simulador Hierarquia',
-        simulatorDesc: 'Simulador de Hierarquia de Memória implementado em C/C++, representando cache, memória principal e armazenamento secundário para demonstrar impacto de latência e organização no desempenho do sistema.',
-        fitnessTitle: 'Fitness App',
-        fitnessDesc: 'Aplicativo mobile desenvolvido em Flutter com arquitetura organizada em camadas — models, screens, widgets e rotas — pensada para facilitar manutenção e evolução do app.',
-        memoryTitle: 'Jogo da Memória',
-        memoryDesc: 'Jogo da memória clássico construído com HTML, CSS e JavaScript puro, com embaralhamento de cartas e interface responsiva.',
         financeTitle: 'Sistema Financeiro',
-        financeDesc: 'Sistema financeiro desenvolvido em Java como projeto de estudo, aplicando orientação a objetos na estruturação do domínio e persistência de dados.',
+        financeDesc: 'Sistema de controle financeiro com back-end em Java (Spring Boot) com autenticação JWT e banco PostgreSQL, e front-end em React com TypeScript e Tailwind CSS.',
         viewRepo: 'Ver no GitHub'
       },
       skills: {
@@ -172,14 +166,8 @@
       projects: {
         title: 'My Projects',
         subtitle: 'Some projects I have recently developed',
-        simulatorTitle: 'Memory Hierarchy Simulator',
-        simulatorDesc: 'Memory hierarchy simulator implemented in C/C++, representing cache, main memory and secondary storage to demonstrate the impact of latency and organization on system performance.',
-        fitnessTitle: 'Fitness App',
-        fitnessDesc: 'Mobile app developed in Flutter with a layered architecture — models, screens, widgets and routes — designed for easy maintenance and evolution.',
-        memoryTitle: 'Memory Game',
-        memoryDesc: 'Classic memory game built with plain HTML, CSS and JavaScript, with shuffled cards and a responsive interface.',
         financeTitle: 'Financial System',
-        financeDesc: 'Financial system developed in Java as a study project, applying object-oriented programming to domain structure and data persistence.',
+        financeDesc: 'Financial management system with a Java (Spring Boot) backend featuring JWT authentication and PostgreSQL, and a React frontend with TypeScript and Tailwind CSS.',
         viewRepo: 'View on GitHub'
       },
       skills: {
