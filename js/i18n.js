@@ -81,6 +81,11 @@
           date: 'Mar 2024 - Mai 2024',
           role: 'Programadora Trainee',
           desc: 'Início da atuação profissional na área de desenvolvimento de software, apoiando na implementação de funcionalidades, correções de bugs e aprendizado de boas práticas de desenvolvimento.'
+        },
+        intern: {
+          date: 'Out 2023 - Fev 2024',
+          role: 'Estagiária de Desenvolvimento',
+          desc: 'Primeira experiência na área de desenvolvimento de software, apoiando a equipe em tarefas de manutenção, testes e aprendizado de tecnologias e boas práticas de desenvolvimento.'
         }
       },
       education: {
@@ -206,6 +211,11 @@
           date: 'Mar 2024 - May 2024',
           role: 'Developer Trainee',
           desc: 'Start of my professional career in software development, supporting feature implementation, bug fixes and learning good development practices.'
+        },
+        intern: {
+          date: 'Oct 2023 - Feb 2024',
+          role: 'Development Intern',
+          desc: 'First experience in software development, supporting the team with maintenance tasks, testing and learning technologies and good development practices.'
         }
       },
       education: {
