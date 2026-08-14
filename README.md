@@ -43,12 +43,12 @@ Olá, pessoal! Sejam bem-vindos ao meu portfólio! 😊
 
 ## Analytics (Google Analytics 4)
 
-O site usa GA4 para medir visitas e o comportamento dos visitantes. O snippet está no `<head>` do `index.html` usando a Measurement ID `G-PPT29TBHVV`.
+O site usa GA4 para medir visitas e o comportamento dos visitantes. O snippet está no `<head>` do `index.html` usando a Measurement ID `G-8E56MWGV4Z` (fluxo "Portfólio", URL `https://taynavicente.com.br`).
 
 Para ativar:
 
 1. Acesse [analytics.google.com](https://analytics.google.com) e crie uma propriedade (nome: ex. "Portfólio") — não precisa de site, o GA4 é configurado por **Data Stream**.
-2. Em **Admin → Data Streams → Web**, registre seu domínio (ex. `taynavicente.com.br`) e confirme que a **Measurement ID** é `G-PPT29TBHVV`.
+2. Em **Admin → Data Streams → Web**, registre seu domínio (ex. `taynavicente.com.br`) e confirme que a **Measurement ID** é `G-8E56MWGV4Z`.
 
 > A ID é pública por design — ela apenas identifica o fluxo de coleta do site.
 
