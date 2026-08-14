@@ -41,6 +41,17 @@ Olá, pessoal! Sejam bem-vindos ao meu portfólio! 😊
 - **Formulário de contato** que envia via Web3Forms (com `mailto:` como fallback).
 - Suporte a **prefers-reduced-motion**.
 
+## Analytics (Google Analytics 4)
+
+O site usa GA4 para medir visitas e o comportamento dos visitantes. O snippet está no `<head>` do `index.html` usando a Measurement ID `G-PPT29TBHVV`.
+
+Para ativar:
+
+1. Acesse [analytics.google.com](https://analytics.google.com) e crie uma propriedade (nome: ex. "Portfólio") — não precisa de site, o GA4 é configurado por **Data Stream**.
+2. Em **Admin → Data Streams → Web**, registre seu domínio (ex. `taynavicente.com.br`) e confirme que a **Measurement ID** é `G-PPT29TBHVV`.
+
+> A ID é pública por design — ela apenas identifica o fluxo de coleta do site.
+
 ## Envio de e-mail (Web3Forms)
 
 O formulário de contato envia a mensagem pela API gratuita do [Web3Forms](https://web3forms.com) e, se o envio falhar, abre o cliente de e-mail (`mailto:`) como fallback.
