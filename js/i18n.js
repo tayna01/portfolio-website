@@ -6,7 +6,7 @@
 
   var translations = {
     pt: {
-      meta: { title: 'Tayná - Software Developer' },
+      meta: { title: 'Tayná Vicente | Desenvolvedora Fullstack' },
       theme: { toggle: 'Alternar tema' },
       lang: { toggle: 'Mudar idioma' },
       nav: {
@@ -133,7 +133,7 @@
     },
 
     en: {
-      meta: { title: 'Tayná - Software Developer' },
+      meta: { title: 'Tayná Vicente | Fullstack Developer' },
       theme: { toggle: 'Toggle theme' },
       lang: { toggle: 'Switch language' },
       nav: {
