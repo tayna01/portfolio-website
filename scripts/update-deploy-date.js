@@ -1,7 +1,7 @@
-// Atualiza a data do último deploy no rodapé (index.html) para a data de hoje.
+// Atualiza a data da última atualização no rodapé (index.html) para a data de hoje.
 // Uso: antes de commitar/pushar o deploy, rode:
 //   node scripts/update-deploy-date.js
-// Como o GitHub Pages faz deploy no push, a data do commit é a data do deploy.
+// O GitHub Actions (workflows/update-footer-date.yml) executa isso automaticamente a cada push.
 'use strict';
 
 const fs = require('fs');
@@ -25,19 +25,19 @@ try {
   process.exit(1);
 }
 
-const pattern = /(<span class="footer-deploy-date">)\d{2}\/\d{2}\/\d{4}(<\/span>)/;
+const pattern = /(<span class="footer-update-date">)\d{2}\/\d{2}\/\d{4}(<\/span>)/;
 
 if (!pattern.test(html)) {
-  console.error('Data de deploy nao encontrada em index.html.');
+  console.error('Data de atualizacao nao encontrada em index.html.');
   process.exit(1);
 }
 
 const updated = html.replace(pattern, '$1' + date + '$2');
 
 if (updated === html) {
-  console.log('Data de deploy ja esta atualizada (' + date + '). Nada a fazer.');
+  console.log('Data de atualizacao ja esta atualizada (' + date + '). Nada a fazer.');
   process.exit(0);
 }
 
 fs.writeFileSync(indexPath, updated);
-console.log('Data de deploy atualizada para ' + date);
+console.log('Data de atualizacao atualizada para ' + date);

@@ -655,12 +655,12 @@ footer p {
   letter-spacing: 1px;
 }
 
-.footer-deploy {
+.footer-update {
   font-size: 11px;
   opacity: 0.75;
 }
 
-.footer-deploy-date {
+.footer-update-date {
   color: var(--accent);
 }
 

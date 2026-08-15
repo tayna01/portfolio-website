@@ -23,7 +23,7 @@ Olá, pessoal! Sejam bem-vindos ao meu portfólio! 😊
 │   ├── reveal.js      # Scroll reveal via Intersection Observer
 │   └── scroll-effects.js # Progresso de scroll + parallax leve (rAF)
 ├── scripts/
-│   └── update-deploy-date.js # Atualiza a data de deploy no rodapé
+│   └── update-deploy-date.js # Atualiza a data de atualização no rodapé
 ├── CNAME             # Domínio personalizado (GitHub Pages)
 └── index.html
 ```
@@ -82,10 +82,6 @@ python -m http.server 8000
 
 O site é publicado via GitHub Pages no domínio `taynavicente.com.br` (definido no `CNAME`).
 
-Antes de dar push (o GitHub Pages publica no push), atualize a data de deploy no rodapé:
-
-```bash
-node scripts/update-deploy-date.js
-```
-
-O script substitui a data em `index.html` (`<span class="footer-deploy-date">`) pela data de hoje.
+A data no rodapé ("Última atualização:") é atualizada automaticamente pelo workflow
+`.github/workflows/update-footer-date.yml`, que roda o script `scripts/update-deploy-date.js`
+a cada push na branch `main` e commita a data de hoje se necessário. Nenhuma ação manual é necessária.

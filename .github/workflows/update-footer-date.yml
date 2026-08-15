@@ -1,0 +1,26 @@
+name: Atualizar data do rodape
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  update-footer-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Atualizar data no rodapé
+        run: node scripts/update-deploy-date.js
+
+      - name: Commitar se houver mudança
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "chore: atualiza data de atualização no rodapé"
+          git push

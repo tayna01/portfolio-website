@@ -129,7 +129,7 @@
         fallback: 'Não foi possível enviar automaticamente. Seu cliente de e-mail abriu com a mensagem pronta.',
         error: 'Por favor, preencha todos os campos.'
       },
-      footer: { text: '© 2026 Tayná Vicente Silva. Todos os direitos reservados.', deployPrefix: 'Último deploy:' }
+      footer: { text: '© 2026 Tayná Vicente Silva. Todos os direitos reservados.', updatePrefix: 'Última atualização:' }
     },
 
     en: {
@@ -256,7 +256,7 @@
         fallback: "Couldn't send automatically. Your email client opened with the message ready to send.",
         error: 'Please fill in all fields.'
       },
-      footer: { text: '© 2026 Tayná Vicente Silva. All rights reserved.', deployPrefix: 'Last deploy:' }
+      footer: { text: '© 2026 Tayná Vicente Silva. All rights reserved.', updatePrefix: 'Last updated:' }
     }
   };
 
