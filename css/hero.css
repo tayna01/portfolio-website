@@ -92,6 +92,27 @@
   animation: pulse 2s infinite;
 }
 
+.badge-divider {
+  width: 1px;
+  height: 12px;
+  background: var(--border);
+}
+
+.hero-badge .cv-download {
+  display: inline-flex;
+  align-items: center;
+  color: var(--muted);
+  padding: 6px;
+  margin: -6px -4px -6px -2px;
+  border-radius: 4px;
+  transition: color var(--speed-fast) ease, background var(--speed-fast) ease;
+}
+
+.hero-badge .cv-download:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
 .hero-title {
   font-family: var(--font-heading);
   line-height: 0.95;

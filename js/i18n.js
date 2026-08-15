@@ -30,7 +30,8 @@
         statExp: 'Anos de exp.',
         statEdu: 'Eng. Software',
         statStack: 'Stack',
-        techLabel: 'Stack —'
+        techLabel: 'Stack —',
+        downloadCv: 'Baixar currículo'
       },
       marquee: {
         softwareEng: 'Engenharia de Software',
@@ -157,7 +158,8 @@
         statExp: 'Years of exp.',
         statEdu: 'Software Eng.',
         statStack: 'Stack',
-        techLabel: 'Stack —'
+        techLabel: 'Stack —',
+        downloadCv: 'Download CV'
       },
       marquee: {
         softwareEng: 'Software Engineering',

@@ -55,6 +55,36 @@
   var form = document.getElementById('contact-form');
   var formStatus = document.getElementById('form-status');
 
+  var cvLink = document.querySelector('.hero-badge a[download]');
+
+  if (cvLink) {
+    cvLink.addEventListener('click', function (event) {
+      if (window.location.protocol !== 'http:' && window.location.protocol !== 'https:') {
+        return;
+      }
+
+      var url = cvLink.getAttribute('href');
+
+      fetch(url)
+        .then(function (response) {
+          if (!response.ok) throw new Error('download failed');
+          return response.blob();
+        })
+        .then(function (blob) {
+          event.preventDefault();
+          var objectUrl = URL.createObjectURL(blob);
+          var temp = document.createElement('a');
+          temp.href = objectUrl;
+          temp.download = cvLink.getAttribute('download') || 'curriculo.pdf';
+          document.body.appendChild(temp);
+          temp.click();
+          document.body.removeChild(temp);
+          URL.revokeObjectURL(objectUrl);
+        })
+        .catch(function () { /* fallback: navegador segue o href */ });
+    });
+  }
+
   var EMAIL_API_ENDPOINT = 'https://api.web3forms.com/submit';
 
   function showFormStatus(message, isError) {
