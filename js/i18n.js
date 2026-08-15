@@ -44,6 +44,8 @@
         subtitle: 'Alguns trabalhos que desenvolvi recentemente',
         financeTitle: 'Sistema Financeiro',
         financeDesc: 'Sistema de controle financeiro com back-end em Java (Spring Boot) com autenticação JWT e banco PostgreSQL, e front-end em React com TypeScript e Tailwind CSS.',
+        sicapTitle: 'SICAP',
+        sicapDesc: 'Projeto integrador desenvolvido em equipe: front-end em React (Vite), back-end em Java (Spring Boot) e landing page própria em sicape.software.',
         viewRepo: 'Ver no GitHub'
       },
       skills: {
@@ -168,6 +170,8 @@
         subtitle: 'Some projects I have recently developed',
         financeTitle: 'Financial System',
         financeDesc: 'Financial management system with a Java (Spring Boot) backend featuring JWT authentication and PostgreSQL, and a React frontend with TypeScript and Tailwind CSS.',
+        sicapTitle: 'SICAP',
+        sicapDesc: 'Team-built integrative project: a React (Vite) frontend, a Java (Spring Boot) backend and its own landing page at sicape.software.',
         viewRepo: 'View on GitHub'
       },
       skills: {
